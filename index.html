@@ -643,13 +643,43 @@
        MODAL CHI TIẾT LÁ BÀI (HIỂN THỊ TỪ KHÓA, BIỂU TƯỢNG, Ý NGHĨA & GHI CHÚ)
        ======================================================================== -->
   <div id="card-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/75 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="modal-card-title">
-    <div class="rainbow-border-box w-full max-w-2xl max-h-[90vh] overflow-y-auto p-5 sm:p-8 relative">
-      <!-- Nút đóng -->
-      <button type="button" id="btn-close-modal" class="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center border transition hover:opacity-80" style="background: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-primary);" aria-label="Đóng cửa sổ">
+    <div class="rainbow-border-box w-full max-w-2xl overflow-hidden relative flex flex-col max-h-[90vh]">
+      <!-- Nút đóng cố định ở góc khung -->
+      <button type="button" id="btn-close-modal" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center border transition hover:opacity-80" style="background: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-primary);" aria-label="Đóng cửa sổ">
         ✕
       </button>
 
-      <div id="modal-card-body"></div>
+      <!-- Vùng nội dung cuộn bên trong khung viền hoàn chỉnh -->
+      <div id="modal-card-body" class="overflow-y-auto p-5 sm:p-8"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL NHẬT KÝ TRẢI BÀI & LÁ BÀI ĐÃ LƯU (LOCALSTORAGE)
+       ======================================================================== -->
+  <div id="journal-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/75 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="journal-modal-title">
+    <div class="rainbow-border-box w-full max-w-3xl overflow-hidden relative flex flex-col max-h-[88vh]">
+      <button type="button" id="btn-close-journal" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center border transition hover:opacity-80" style="background: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-primary);" aria-label="Đóng nhật ký">
+        ✕
+      </button>
+
+      <div class="overflow-y-auto p-5 sm:p-8">
+        <h3 id="journal-modal-title" class="font-serif-zen text-2xl font-medium mb-1">Không Gian Lưu Trữ Cá Nhân</h3>
+        <p class="text-xs sm:text-sm mb-5" style="color: var(--text-secondary);">
+          Tự động lưu trữ các lá bài yêu thích, ghi chú chiêm nghiệm riêng và nhật ký các phiên trải bài của bạn.
+        </p>
+
+        <div class="flex gap-2 mb-5 border-b pb-3" style="border-color: var(--border-subtle);">
+          <button type="button" id="jtab-logs" class="px-4 py-1.5 rounded-full text-xs font-semibold border" style="background: var(--bg-elevated); border-color: var(--rb-gold); color: var(--text-primary);">
+            Nhật ký trải bài
+          </button>
+          <button type="button" id="jtab-cards" class="px-4 py-1.5 rounded-full text-xs font-medium border" style="background: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-secondary);">
+            Lá bài & Ghi chú đã lưu
+          </button>
+        </div>
+
+        <div id="journal-modal-content"></div>
+      </div>
     </div>
   </div>
 
