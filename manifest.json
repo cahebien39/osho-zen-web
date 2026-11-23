@@ -1,0 +1,19 @@
+{
+"name": "Osho Zen Tarot — Ngôi Đền Tĩnh Lặng",
+"short_name": "Osho Zen Tarot",
+"description": "Không gian thiền định và soi chiếu tâm thức hiện tại với trọn vẹn 79 lá bài Osho Zen Tarot.",
+"start_url": "./index.html",
+"display": "standalone",
+"background_color": "#f7f4ec",
+"theme_color": "#eab948",
+"orientation": "portrait-primary",
+"lang": "vi",
+"icons": [
+{
+"src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='64' y2='64' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%23f26457'/%3E%3Cstop offset='35%25' stop-color='%23eab948'/%3E%3Cstop offset='70%25' stop-color='%2338b87c'/%3E%3Cstop offset='100%25' stop-color='%237c67e8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230b0d17'/%3E%3Ccircle cx='32' cy='32' r='22' stroke='url(%23g)' stroke-width='2.5' fill='none'/%3E%3Cpolygon points='32,12 49,42 15,42' stroke='url(%23g)' stroke-width='2' fill='none'/%3E%3Cpolygon points='32,52 49,22 15,22' stroke='url(%23g)' stroke-width='2' fill='none'/%3E%3Ccircle cx='32' cy='32' r='4.5' fill='url(%23g)'/%3E%3C/svg%3E",
+"sizes": "any",
+"type": "image/svg+xml",
+"purpose": "any maskable"
+}
+]
+}
