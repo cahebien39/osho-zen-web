@@ -1,0 +1,16 @@
+# Tệp hệ thống macOS & Windows
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Thư mục cấu hình IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Nhật ký & tệp tạm
+*.log
+npm-debug.log*
+.env
+.env.local
