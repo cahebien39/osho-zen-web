@@ -1,0 +1,13 @@
+CÁCH CÀI OSHO ZEN TAROT THÀNH ỨNG DỤNG TRÊN ĐIỆN THOẠI
+
+Bước 1. Đưa cả thư mục này lên một địa chỉ https (miễn phí):
+ - Netlify Drop: vào app.netlify.com/drop, kéo thả thư mục osho-zen-app vào.
+ - Hoặc GitHub Pages, Cloudflare Pages.
+Lưu ý: phải đưa lên đủ index.html, manifest.webmanifest, sw.js và thư mục icons.
+
+Bước 2. Mở đường link nhận được trên điện thoại.
+ - iPhone: dùng Safari, bấm Chia sẻ, chọn "Thêm vào Màn hình chính".
+ - Android: dùng Chrome, bấm menu ba chấm, chọn "Cài đặt ứng dụng".
+ Không mở bằng trình duyệt trong Zalo hay Facebook.
+
+Sau lần mở đầu, ứng dụng chạy được cả khi không có mạng.
