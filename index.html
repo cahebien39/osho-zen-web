@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="dark">
+<html lang="vi" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -55,7 +55,7 @@
       --el-cloud: #94a3b8;
       --el-rainbow: #c06cf0;
 
-      /* Giao diện Tối mặc định: Đêm sâu tĩnh lặng */
+      /* Giao diện Tối: Đêm sâu tĩnh lặng */
       --bg-base: #0b0d17;
       --bg-elevated: rgba(19, 23, 39, 0.86);
       --bg-card: rgba(23, 28, 47, 0.92);
@@ -67,7 +67,7 @@
       --shadow-aura: 0 12px 40px -10px rgba(0, 0, 0, 0.65);
     }
 
-    /* Giao diện Sáng: Giấy thiền ấm dịu mắt */
+    /* Giao diện Sáng mặc định: Giấy thiền ấm dịu mắt */
     html[data-theme="light"] {
       --bg-base: #f7f4ec;
       --bg-elevated: rgba(255, 253, 248, 0.92);
@@ -1028,7 +1028,7 @@ Trưởng Thành|Maturity|Vững chãi, Nở hoa bên trong, Bình an tự tại
         if (raw) {
           const parsed = JSON.parse(raw);
           return {
-            theme: parsed.theme || "dark",
+            theme: parsed.theme || "light",
             activeTab: parsed.activeTab || "home",
             activeSpreadId: parsed.activeSpreadId || "super-quickie",
             deckSuitFilter: parsed.deckSuitFilter || "ALL",
@@ -1040,7 +1040,7 @@ Trưởng Thành|Maturity|Vững chãi, Nở hoa bên trong, Bình an tự tại
         console.warn("Không thể đọc localStorage:", err);
       }
       return {
-        theme: "dark",
+        theme: "light",
         activeTab: "home",
         activeSpreadId: "super-quickie",
         deckSuitFilter: "ALL",
