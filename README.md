@@ -1,7 +1,8 @@
-Osho Zen Tarot — Ngôi Đền Tĩnh Lặng
+Osho Zen Tarot — Ngôi Đền Tĩnh Lặng 
+
 "Tâm trí luôn sống ở quá khứ hoặc tương lai; chỉ có sự tỉnh thức mới biết đến khoảnh khắc hiện tại."
 
-Ứng dụng web tĩnh (Single-File Web App) mang tinh thần thiền định và quan sát tâm thức hiện sinh dựa trên bộ bài Osho Zen Tarot (79 lá): một không gian tĩnh tại trên màn hình giúp soi chiếu trạng thái nội tâm trong khoảnh khắc hiện tại thay vì tìm kiếm lời phán định mệnh.
+- Ứng dụng web tĩnh (Single-File Web App) mang tinh thần thiền định và quan sát tâm thức hiện sinh dựa trên bộ bài Osho Zen Tarot (79 lá). Một không gian tĩnh tại trên màn hình giúp soi chiếu trạng thái nội tâm trong khoảnh khắc hiện tại thay vì tìm kiếm lời phán định mệnh.
 
 Điểm Nổi Bật:
 
