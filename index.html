@@ -1,731 +1,1461 @@
 <!DOCTYPE html>
+
 <html lang="vi">
+
 <head>
+
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>Osho Zen Tarot – Lớp học 79 lá bài</title>
+
 <meta name="theme-color" content="#140e3d">
+
 <meta name="mobile-web-app-capable" content="yes">
+
 <meta name="apple-mobile-web-app-capable" content="yes">
+
 <meta name="apple-mobile-web-app-title" content="Osho Zen">
+
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 <link rel="manifest" href="./manifest.webmanifest">
+
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23140e3d'/%3E%3Cpath d='M44 20a17 17 0 1 0 4 12' fill='none' stroke='%23e8b85a' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23e8b85a'/%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
 <style>
+
 :root{--bg:#f6f0e2;--sf:#fffaf0;--sf2:#ece4f2;--tx:#241b4b;--mu:#5d577d;--gold:#5b3f9a;--au:#a8741a;--ln:#d9cfe4;--onc:#fff;
+
 --fire:#b93a2a;--water:#2a68ab;--cloud:#6b7280;--rain:#8a3fa8;--major:#a8741a;
+
 --hd1:#2a1f6e;--hd2:#140e3d;--hdg:rgba(232,184,90,.26);--ov:rgba(12,8,36,.76);--sh:0 8px 24px rgba(36,27,75,.14)}
+
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0b2e;--sf:#1b1548;--sf2:#262060;--tx:#f1e9d2;--mu:#b9b2d8;--gold:#e8b85a;--au:#e8b85a;--ln:#3a3270;--onc:#1a1238;--fire:#ef6a4f;--water:#5aa2e6;--cloud:#a9afbe;--rain:#c58be8;--major:#e8b85a;--hd1:#1d1558;--hd2:#0f0b2e;--hdg:rgba(232,184,90,.20);--ov:rgba(6,4,22,.86);--sh:0 8px 24px rgba(0,0,0,.45)}}
+
 :root[data-theme="dark"]{--bg:#0f0b2e;--sf:#1b1548;--sf2:#262060;--tx:#f1e9d2;--mu:#b9b2d8;--gold:#e8b85a;--au:#e8b85a;--ln:#3a3270;--onc:#1a1238;--fire:#ef6a4f;--water:#5aa2e6;--cloud:#a9afbe;--rain:#c58be8;--major:#e8b85a;--hd1:#1d1558;--hd2:#0f0b2e;--hdg:rgba(232,184,90,.20);--ov:rgba(6,4,22,.86);--sh:0 8px 24px rgba(0,0,0,.45)}
+
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+
 html,body{height:100%}
+
 body{margin:0;display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden;background:var(--bg);color:var(--tx);font-family:"Inter",system-ui,-apple-system,sans-serif;line-height:1.65}
+
 h1,h2,h3,.cn,.h{font-family:"Lora",Georgia,serif;font-weight:500;margin:0}
+
 button{font:inherit;color:inherit;cursor:pointer}
+
 button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
 p{margin:.45em 0}
+
 .mu{color:var(--mu)}
+
 /* header */
+
 .top{position:relative;flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:radial-gradient(ellipse at 50% 0,var(--hdg),transparent 70%),linear-gradient(180deg,var(--hd1),var(--hd2));color:#f1e9d2}
+
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
+
 .dm{width:16px;height:16px;transform:rotate(45deg);border-radius:3px;flex:none;background:linear-gradient(135deg,#ef6a4f,#e8b85a,#5aa2e6,#c58be8)}
+
 .brand b{display:block;font-family:"Lora",Georgia,serif;font-weight:500;letter-spacing:.08em;color:#e8b85a;font-size:1.05rem;line-height:1.2}
+
 .brand small{color:#cfc8ea;font-size:.78rem}
+
 .tools{display:flex;gap:6px}
+
 .ib{width:38px;height:38px;border-radius:50%;border:1px solid rgba(232,184,90,.45);background:rgba(255,255,255,.07);color:#f1e9d2;display:grid;place-items:center;font-size:1.05rem;transition:background .4s}
+
 .ib[hidden]{display:none}
+
 .ib svg{width:18px;height:18px}
+
 .ib:hover{background:rgba(255,255,255,.14)}
+
 /* views */
+
 #view{flex:1;min-height:0;position:relative}
+
 .v{display:none;position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+
 .v.on{display:block;animation:vin .5s ease both}
+
 #v-ask.on{display:flex;flex-direction:column;overflow:hidden}
+
 @keyframes vin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
 .wrap{max-width:720px;margin:0 auto;padding:16px 16px 30px}
+
 .h{font-size:1.45rem;color:var(--gold);margin-bottom:2px}
+
 .sub{color:var(--mu);font-size:.92rem;margin:0 0 12px}
+
 /* bottom nav */
+
 .bar{flex:none;display:flex;justify-content:center;gap:2px;background:var(--sf);border-top:1px solid var(--ln);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+
 .bar button{flex:1;max-width:112px;background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 2px;border-radius:12px;color:var(--mu);font-size:.7rem;transition:color .4s,background .4s}
+
 .bar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
 .bar button{min-width:0;white-space:nowrap}
+
 @media (max-width:380px){.bar{padding-left:2px;padding-right:2px;gap:0}.bar button{font-size:.64rem;padding:6px 0}.top{padding-left:10px;padding-right:10px}.brand{gap:8px}.brand b{font-size:.95rem;letter-spacing:.05em}}
+
 @media (min-width:760px){.top{padding-left:calc((100% - 720px)/2 + 16px);padding-right:calc((100% - 720px)/2 + 16px)}}
+
 .bar button[aria-current=page]{color:var(--gold);background:var(--sf2)}
+
 /* segmented chips */
+
 .seg{display:flex;gap:8px;overflow-x:auto;padding:2px 1px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+
 .seg::-webkit-scrollbar{display:none}
+
 .seg button{flex:none;border:1px solid var(--ln);background:var(--sf);border-radius:999px;padding:7px 15px;font-size:.9rem;font-weight:500;transition:all .5s ease;white-space:nowrap}
+
 .seg button[aria-pressed=true]{background:var(--c,var(--gold));color:var(--onc);border-color:var(--c,var(--gold))}
+
 /* buttons */
+
 .btn{border:0;background:var(--gold);color:var(--onc);border-radius:999px;padding:10px 20px;font-weight:500;transition:transform .4s ease,opacity .4s}
+
 .btn:hover{transform:translateY(-1px)}
+
 .btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+
 .row{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+
 .lk{font-size:.85rem;margin:2px 2px;background:var(--sf);color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:2px 11px;transition:background .4s}
+
 .lk:hover{background:var(--sf2)}
+
 /* panels and cards */
+
 .panel{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:20px;box-shadow:var(--sh)}
+
 .cd{border-top:5px solid var(--c,var(--gold));background:var(--sf);border-radius:16px;padding:18px 20px 20px;border:1px solid var(--ln);border-top:5px solid var(--c,var(--gold));box-shadow:var(--sh)}
+
 .cd .k{color:var(--c,var(--gold));font-weight:600;letter-spacing:.06em;font-size:.82rem;text-transform:uppercase}
+
 .cn{font-size:clamp(1.7rem,6vw,2.3rem);color:var(--c,var(--gold));margin:.1em 0 0;line-height:1.2}
+
 .en{color:var(--mu);font-style:italic;margin-bottom:.4em}
+
 .ct{font-size:1.04rem;margin:.6em 0}
+
 .q{border-left:4px solid var(--c,var(--gold));padding:4px 0 4px 12px;margin:12px 0 2px;font-style:italic}
+
 .q b{display:block;font-style:normal;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+
 .lbl{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mu);margin:12px 0 2px;font-weight:600}
+
 .note{font-size:.88rem;color:var(--mu);border-left:3px solid var(--ln);padding-left:10px;margin:10px 0 2px}
+
 .warn{border-left:5px solid var(--fire);background:var(--sf);padding:12px 16px;border-radius:10px;margin:0 0 14px;font-size:.92rem}
+
 /* pager */
+
 .pgb{animation-duration:.45s;animation-fill-mode:both}
+
 .pgb.r{animation-name:inr}.pgb.l{animation-name:inl}
+
 @keyframes inr{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
 @keyframes inl{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}
+
 .pgn{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 4px}
+
 .pb{width:48px;height:48px;border-radius:50%;border:1px solid var(--ln);background:var(--sf);font-size:1.6rem;line-height:1;color:var(--gold);transition:all .4s}
+
 .pb:hover:not(:disabled){background:var(--sf2)}
+
 .pb:disabled{opacity:.3;cursor:default}
+
 .pgm{flex:1;text-align:center;color:var(--mu);font-size:.9rem;display:flex;justify-content:center;align-items:center;gap:6px}
+
 .dot{width:8px;height:8px;border-radius:50%;background:var(--ln);transition:all .4s}
+
 .dot.on{background:var(--au);width:22px;border-radius:6px}
+
 /* chat */
+
 .msgs{flex:1;min-height:0;overflow-y:auto;padding:14px 14px 6px;max-width:720px;width:100%;margin:0 auto;scroll-behavior:smooth}
+
 .m{max-width:90%;margin:10px 0;padding:11px 15px;border-radius:18px;animation:pop .45s ease both;overflow-wrap:anywhere}
+
 .m.a{background:var(--sf);border:1px solid var(--ln);border-top-left-radius:5px}
+
 .m.u{margin-left:auto;background:var(--gold);color:var(--onc);border-top-right-radius:5px}
+
 @keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+
 .qr{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px;animation:pop .5s ease both}
+
 .qr button{border:1px solid var(--gold);background:transparent;color:var(--gold);border-radius:999px;padding:7px 14px;font-size:.9rem;transition:all .4s}
+
 .qr button:hover{background:var(--gold);color:var(--onc)}
+
 .dots{display:inline-flex;gap:5px;padding:4px 2px}
+
 .dots i{width:7px;height:7px;border-radius:50%;background:var(--mu);animation:bl 1.2s infinite ease-in-out}
+
 .dots i:nth-child(2){animation-delay:.2s}.dots i:nth-child(3){animation-delay:.4s}
+
 @keyframes bl{0%,80%,100%{opacity:.25;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
+
 .cmp{flex:none;display:flex;align-items:flex-end;gap:8px;padding:10px 12px;border-top:1px solid var(--ln);background:var(--bg);max-width:720px;width:100%;margin:0 auto}
+
 .cmp textarea{flex:1;resize:none;border:1px solid var(--ln);background:var(--sf);color:var(--tx);border-radius:20px;padding:10px 16px;font:inherit;line-height:1.4;max-height:120px}
+
 .cmp .btn{height:42px;padding:0 18px}
+
 .cmpw{flex:none;border-top:1px solid var(--ln);background:var(--bg)}
+
 .cmpw .cmp{border-top:0}
+
 /* spreads */
+
 .sp{display:grid;gap:7px;margin:14px auto}
+
 .pos{background:var(--sf);color:var(--tx);border:1px dashed var(--gold);border-radius:10px;min-height:52px;font-weight:600;color:var(--gold);transition:all .4s;display:grid;place-items:center;font-size:.95rem}
+
 .pos.f{border-style:solid;border-color:var(--c);color:var(--c)}
+
 .pos.cur{background:var(--c,var(--gold));color:var(--onc);transform:scale(1.06)}
+
 .pos.x{transform:rotate(90deg) scale(.7);z-index:2;background:var(--bg)}
+
 .pos.x.cur{background:var(--c,var(--gold));transform:rotate(90deg) scale(.78)}
+
 .pt{font-family:"Lora",Georgia,serif;font-size:1.1rem;margin:2px 0 10px}
+
 ol.pl{padding-left:20px;margin:10px 0}
+
 /* meditation */
+
 .br{width:150px;height:150px;border-radius:50%;margin:14px auto 22px;display:grid;place-items:center;position:relative;border:2px solid var(--au);background:radial-gradient(circle,var(--hdg),transparent 72%),var(--sf2);animation:br 10s ease-in-out infinite}
+
 .br span{position:absolute;color:var(--gold);font-weight:500;opacity:0}
+
 .br .i{animation:bi 10s infinite}.br .o{animation:bo 10s infinite}
+
 @keyframes br{0%{transform:scale(.8)}40%{transform:scale(1.15)}100%{transform:scale(.8)}}
+
 @keyframes bi{0%,36%{opacity:1}42%,100%{opacity:0}}
+
 @keyframes bo{0%,38%{opacity:0}44%,94%{opacity:1}100%{opacity:0}}
+
 .stp{font-size:1.12rem;text-align:center;max-width:520px;margin:0 auto}
+
 ol.st{padding-left:20px}ol.st li{margin:6px 0}
+
 /* reference */
+
 .sym{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+
 .sym div{background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:10px 12px;font-size:.92rem}
+
 .sym b{color:var(--gold);font-family:"Lora",Georgia,serif}
+
 #sq,.srch{width:100%;font:inherit;padding:10px 16px;border-radius:999px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);margin:2px 0 12px}
+
 details{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:10px 16px;margin:10px 0}
+
 summary{cursor:pointer;color:var(--gold);font-family:"Lora",Georgia,serif;font-size:1.05rem}
+
 details ul,details ol{padding-left:20px}
+
 .box{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px 18px;margin:10px 0}
+
 /* sheet */
+
 .sh{position:fixed;inset:0;background:var(--ov);display:none;align-items:flex-end;justify-content:center;z-index:50;backdrop-filter:blur(3px)}
+
 .sh.on{display:flex;animation:vin .3s ease both}
+
 .shp{position:relative;background:var(--sf);width:100%;max-width:640px;max-height:88vh;max-height:88dvh;overflow-y:auto;border-radius:22px 22px 0 0;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px));border-top:4px solid var(--c,var(--gold));animation:up .4s ease both}
+
 @keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+
 .shp .cd{border:0;box-shadow:none;padding:6px 0 0}
+
 #shx{position:absolute;right:10px;top:6px;font-size:1.7rem;background:none;border:0;color:var(--tx);z-index:3}
+
 @media (min-width:700px){.sh{align-items:center}.shp{border-radius:22px}}
+
 .gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+
 .gl button{text-align:left;background:var(--sf);border:1px solid var(--ln);border-top:4px solid var(--c);border-radius:10px;padding:8px 10px;transition:transform .4s}
+
 .gl button:hover{transform:translateY(-2px)}
+
 .gl small{display:block;color:var(--c);font-weight:600;font-size:.72rem}
-@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.br{animation:none!important;width:auto;height:auto;border-radius:999px;padding:10px 22px;gap:8px;grid-auto-flow:column}.br span{position:static;animation:none!important;opacity:1}}
+
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.br{animation:none!important;width:auto;height:auto;border-radius:999px;padding:10px 22px;gap:8px;grid-auto-flow:column}.br span{position:static;animation:none!important;opacity:1}}
+
 .top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#ef6a4f,#e8b85a,#7fbf7a,#5aa2e6,#c58be8);opacity:.9}
+
 </style>
+
 </head>
+
 <body>
+
 <header class="top">
+
 <div class="brand"><span class="dm"></span><div><b>OSHO ZEN TAROT</b><small>Lớp học 79 lá bài</small></div></div>
+
 <div class="tools"><button class="ib" id="btnTheme" aria-label="Đổi giao diện sáng hoặc tối"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button><button class="ib" id="btnInstall" aria-label="Cài ứng dụng" title="Cài ứng dụng"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></button><button class="ib" id="btnInfo" aria-label="Giới thiệu và lưu ý">i</button></div>
+
 </header>
+
 <main id="view">
+
 <section class="v" id="v-ask" aria-label="Hỏi đáp">
+
 <div class="msgs" id="msgs" aria-live="polite"></div>
+
 <div class="cmpw"><div class="cmp">
+
 <textarea id="inp" rows="1" maxlength="500" placeholder="Kể điều bạn bận lòng…" aria-label="Câu hỏi của bạn"></textarea>
+
 <button class="btn" id="snd">Gửi</button>
+
 </div></div>
+
 </section>
+
 <section class="v" id="v-lib" aria-label="Thư viện 79 lá"><div class="wrap">
+
 <h1 class="h">Thư viện 79 lá</h1><p class="sub">Mỗi lần một lá. Vuốt hoặc dùng mũi tên để chuyển.</p>
+
 <div class="seg" id="libf"></div><div id="libp"></div>
+
 <div class="row"><button class="btn ghost" id="libList">Danh sách</button><button class="btn ghost" id="libRand">Rút ngẫu nhiên</button><button class="btn ghost" id="libAsk">Hỏi về lá này</button></div>
+
 </div></section>
+
 <section class="v" id="v-spread" aria-label="Trải bài"><div class="wrap">
+
 <h1 class="h">Trải bài</h1><p class="sub">Chọn một kiểu trải, rút bài, rồi đọc từng vị trí một.</p>
+
 <div class="seg" id="spseg"></div><div id="spinfo"></div><div class="sp" id="spmap"></div><div id="spbody"></div>
+
 </div></section>
+
 <section class="v" id="v-med" aria-label="Thiền"><div class="wrap">
+
 <h1 class="h">Thiền với bộ bài</h1><div id="medhead"></div>
+
 <div class="seg" id="medseg"></div><div id="medbody"></div>
+
 </div></section>
+
 <section class="v" id="v-self" aria-label="Tự soi"><div class="wrap">
+
 <h1 class="h">Tự phản chiếu</h1>
+
 <div class="warn"><b>Công cụ tự soi, không thay thế bác sĩ hay nhà tâm lý.</b> Trong tình huống nguy cấp, gọi cấp cứu 115 hoặc đến cơ sở y tế gần nhất.</div>
+
 <div class="seg" id="selfseg"></div><div id="selfbody"></div>
+
 </div></section>
+
 <section class="v" id="v-ref" aria-label="Tra cứu"><div class="wrap">
+
 <h1 class="h">Tra cứu</h1><p class="sub">Tinh thần bộ bài, bản đồ hành trình và từ điển biểu tượng.</p>
+
 <div class="seg" id="refseg"></div><div id="refbody"></div>
+
 </div></section>
+
 </main>
+
 <nav class="bar" id="bar" aria-label="Điều hướng chính">
+
 <button data-v="ask"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Hỏi đáp</button>
+
 <button data-v="lib"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 8h4M10 12h4"/></svg>Thư viện</button>
+
 <button data-v="spread"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/></svg>Trải bài</button>
+
 <button data-v="med"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Thiền</button>
+
 <button data-v="self"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="6"/><path d="M12 16v5M9 21h6"/></svg>Tự soi</button>
+
 <button data-v="ref"><svg viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h5"/></svg>Tra cứu</button>
+
 </nav>
+
 <div class="sh" id="sh" aria-hidden="true"><div class="shp" role="dialog" aria-modal="true"><button id="shx" aria-label="Đóng">×</button><div id="shb"></div></div></div>
+
 <script>
+
 var S=[
+
 {k:"M",n:"Đại Bí Mật",c:"var(--major)",lb:["0","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","★"],d:
+
 `Kẻ Khờ|The Fool|Bước đi với sự ngây thơ và tin cậy, bỏ lại quá khứ. Chiếc áo mang đủ bốn nguyên tố: hòa hợp với tất cả. Trực giác lúc này đáng tin hơn lý trí hoài nghi.|Việc nào bạn đang chờ “chắc chắn” mới dám bước?
+
 Hiện Hữu|Existence|Cảm giác “ở nhà” ở bất cứ đâu: sao, đá, cây, cá đều là anh em. Sự chia rẽ chỉ là ảo tưởng của tâm trí.|Tối nay ra ngoài ngắm sao vài phút.
+
 Tiếng Nói Bên Trong|Inner Voice|Tiếng nói của trái tim không dùng lời. Khi quá nhiều giọng nói kéo bạn đi, đó là lời nhắc tìm im lặng và trở về trung tâm.|Ngồi yên 5 phút, hỏi: điều gì là thật với mình?
+
 Sáng Tạo|Creativity|Sáng tạo là buông mình cho năng lượng sinh ra vạn vật. Kỹ thuật chỉ là công cụ; ta không sở hữu tác phẩm của mình.|Làm một việc nhỏ (nấu, vẽ, hát) không cần giỏi.
+
 Kẻ Nổi Loạn|The Rebel|Không chống đối ai, mà phá xiềng điều kiện hóa của xã hội để sống đúng bản chất. Giàu hay nghèo, người ấy vẫn là một vị vua.|Bạn đang sống theo ý kiến của ai?
+
 Hư Không|No-Thingness|Khoảng trống không phương hướng khiến ta hoang mang, nhưng đó là trạng thái tiềm năng thuần khiết trước khi vũ trụ sinh ra. Thả lỏng, quan sát khoảng ngưng giữa hơi thở.|Quan sát khoảng lặng giữa hơi thở vào và ra.
+
 Những Người Yêu|The Lovers|Tình yêu là cả phổ: từ hấp dẫn thể xác đến tình yêu tôn trọng cá tính và cuối cùng là tình yêu phổ quát. Bạn đời là tấm gương soi phần sâu của ta; tình yêu thật dựa trên tự do, không dựa trên nhu cầu.|Điều gì người kia phản chiếu về bạn?
+
 Tỉnh Thức|Awareness|Bức màn ảo ảnh đang cháy bởi ngọn lửa mát của sự nhận biết. Không cần cố gắng; bạn vốn là chứng nhân im lặng, bất biến.|Một lúc trong ngày, chỉ quan sát mà không can thiệp.
+
 Dũng Cảm|Courage|Bông hoa dại xuyên qua đá để ra ánh sáng. Đừng chống cự hay đổ lỗi cho thử thách; hạt giống muốn thành hoa phải đi qua chúng.|Thử thách nào đang giúp bạn lớn?
+
 Cô Độc An Nhiên|Aloneness|Không có ai bên cạnh, ta có thể cô đơn hoặc tận hưởng tự do. Lời Phật: hãy là ngọn đèn cho chính mình.|Bạn chọn nhìn sự một mình theo cách nào?
+
 Thay Đổi|Change|Bánh xe thời gian, nghiệp và các vì sao quay không ngừng. Bám vào vành bánh xe thì chóng mặt; hãy tiến về tâm bão và biết rằng “điều này cũng sẽ qua”.|Điều gì đang đổi mà bạn đang níu lại?
+
 Đột Phá|Breakthrough|Khi “đủ rồi”, hãy dám phá vỡ khuôn mẫu cũ để năng lượng lưu thông. Màu đỏ nói về sức mạnh bắt nguồn từ đám rối thái dương.|Giới hạn cũ nào cần được phá bỏ?
+
 Cái Nhìn Mới|New Vision|Con người mọc cánh, thấy đời nhiều chiều: vuông (hữu hình), tròn (vô hình), tam giác (người chứa cả hai). Bóng tối cần như ánh sáng.|Bạn có thể nhìn khó khăn từ góc khác không?
+
 Chuyển Hóa|Transformation|Đã đến lúc buông sâu: để đau khổ cứ hiện diện và chấp nhận. Như Phật chỉ giác ngộ khi thôi cố gắng. Chuyển hóa đến theo thời của nó, như cái chết.|Điều gì chỉ cần được chấp nhận, không cần sửa?
+
 Hợp Nhất|Integration|Hôn phối huyền nhiệm của các đối cực: ngày và đêm, nam và nữ, lửa và nước, sinh và tử. Đại bàng (sức mạnh) và thiên nga (thanh khiết) cùng ở trong ta.|Hai phần đối lập nào trong bạn cần hòa giải?
+
 Điều Kiện Hóa|Conditioning|Như chú sư tử lớn lên giữa bầy cừu, ta tưởng mình là cừu vì ý kiến người khác. Hãy soi bóng mình trong hồ nước và đánh thức sư tử ngủ yên.|Niềm tin nào về bản thân do người khác áp đặt?
+
 Sét Đánh|Thunderbolt|Tòa tháp an toàn bị phá; ta nhảy ra vì không còn chọn lựa. Động đất bên trong là cần thiết: sau bão, trời trong; sau lửa, đất màu mỡ. Hãy làm chứng và nói “vâng”.|Sự an toàn giả nào đang sụp đổ?
+
 Tĩnh Lặng|Silence|Khoảng thời gian quý: nghỉ ngơi trong tĩnh lặng, nơi im lặng của bạn chạm im lặng của vũ trụ. Chưa cần làm gì, hãy về nhà với chính mình.|Dành một buổi tối không màn hình.
+
 Tiền Kiếp|Past Lives|Không để tò mò về kiếp nổi tiếng, mà để thấy khuôn mẫu nghiệp lặp lại và rễ của hành vi vô thức. Một cái nhìn vào vĩnh cửu là món quà.|Vòng lặp nào lặp lại trong đời bạn?
+
 Ngây Thơ|Innocence|Ngây thơ của người từng trải: như trẻ thơ nhưng không trẻ con, vì có trí tuệ và sự chấp nhận kỳ diệu của đời. Hoa rơi quanh ông lão là sự buông và ngọt ngào.|Điều gì bạn làm lại bằng đôi mắt trẻ thơ?
+
 Vượt Qua Ảo Tưởng|Beyond Illusion|Con bướm là cái bên ngoài luôn chuyển động, còn phía sau là ý thức vĩnh cửu. Đừng tìm sự thật bên ngoài; bỏ tâm phán xét tốt/xấu và quay vào trong.|Hôm nay bạn phán xét điều gì?
+
 Viên Mãn|Completion|Mảnh ghép cuối vào chỗ con mắt thứ ba: ta thấy toàn cảnh. Kết thúc có thể gây tuyệt vọng hoặc biết ơn; hãy mừng cả cái cũ khép lại lẫn cái mới sắp đến.|Điều gì sắp hoàn tất để bạn trân trọng?
+
 Bậc Thầy|The Master|Bậc thầy Thiền không làm chủ người khác mà làm chủ chính mình. Học trò không đi theo mà thấm sự hiện diện ấy. Hãy học rồi tiếp tục bước (“charaiveti”: đi tiếp).|Ai hoặc điều gì là gương soi cho bạn?`},
+
 {k:"F",n:"Lửa",c:"var(--fire)",d:
+
 `Người Sáng Tạo|The Creator|Làm chủ ngọn lửa đam mê, không đè nén cũng không hủy hoại. Việc bạn làm bằng sự trưởng thành sẽ làm giàu cho mình và người.|Kỹ năng nào của bạn có thể làm đẹp cho người khác?
+
 Chia Sẻ|Sharing|Nữ hoàng giàu đến mức cho đi không tính toán; càng chia sẻ càng đầy. Tận hưởng thân xác và dự án mà không chiếm hữu.|Bạn có thể chia sẻ niềm vui nào hôm nay?
+
 Mãnh Liệt|Intensity|Hiệp sĩ hóa thành mũi tên, tập trung vào khoảnh khắc “bây giờ” theo chiều dọc, không phải vội vã ngang. Có người được truyền hứng, có người khó chịu; đừng bận tâm.|Việc nào xứng đáng được làm hết mình?
+
 Vui Đùa|Playfulness|Cuộc sống hiếm khi nghiêm trọng như ta tưởng. Người phụ nữ như bướm vừa thoát kén, chơi như đứa trẻ trên bãi biển. Điều mới tuyệt vời sắp tới.|Làm một điều ngớ ngẩn mà không xấu hổ.
+
 Khả Năng|Possibilities|Đại bàng nhìn toàn cảnh mọi khả năng. Khi thương mình và thư thái, bạn thấy cơ hội sớm hơn người khác.|Có cánh cửa nào bạn chưa thấy?
+
 Trải Nghiệm|Experiencing|“Kinh nghiệm” có thể cất vào album; “trải nghiệm” là sự kinh ngạc và hòa hợp. Chạm cây già bằng sự kính cẩn là cách đến gần thiên nhiên.|Chạm vào thiên nhiên bằng cả giác quan.
+
 Tham Dự|Participation|Vòng mandala: tay phải nhận, tay trái cho, tạo nên trường năng lượng như quanh một vị Phật. Cái chung đẹp hơn tổng các phần.|Bạn đóng góp gì cho điều lớn hơn mình?
+
 Trọn Vẹn|Totality|Ba người đu xà: không ai được “vắng mặt” một giây. Làm từng việc một với sự chú tâm trọn vẹn; điều quan trọng là cách làm, không phải việc gì.|Chọn một việc nhàm chán và làm thật trọn.
+
 Thành Công|Success|Bạn đang “trên đỉnh thế giới”. Tận hưởng, chia sẻ, nhưng đừng bọc nhựa khoảnh khắc: đỉnh hay thung lũng đều có hồi kết.|Bạn có thể ăn mừng mà không bám giữ không?
+
 Căng Thẳng|Stress|Quá nhiều quả bóng trên không thì khỉ nhỏ sẽ xuất hiện! Người cầu toàn tự tạo căng thẳng vì nghĩ thiếu mình thì mọi việc đổ vỡ. Hãy đi dạo, mua hoa.|Bạn có thể buông việc gì hôm nay?
+
 Du Hành|Traveling|Hành trình chính là đích đến. Đây là lúc chuyển động, dễ dàng và mạo hiểm; đón cái mới như đi nước ngoài, với sự cởi mở.|Đón sự thay đổi như người lữ khách.
+
 Kiệt Sức|Exhaustion|Cạn năng lượng vì nuôi cỗ máy tự trọng và năng suất. Cuộc đời là bí ẩn để sống chứ không phải công việc để quản lý. Hãy xé tờ chấm công.|Hôm nay bạn nghỉ vì mình được không?
+
 Đè Nén|Suppression|Bị trói nút, ánh sáng vẫn còn trong nhưng bạn đã trao sức mạnh để được chấp nhận. Núi lửa sắp phun: hãy tìm lối xả lành mạnh, như đập gối, hét giữa đồng.|Căng thẳng nào cần một lối thoát an toàn?
+
 Nguồn Cội|The Source|Hồ chứa năng lượng vô tận ở bên trong, như mặt trời cá nhân. Ta chạm vào bằng sự tĩnh lặng và nối đất, không bằng suy tính. Bắt đầu hay nghỉ ngơi đều về nguồn.|Trở về trung tâm trước khi bắt đầu việc mới.`},
+
 {k:"W",n:"Nước",c:"var(--water)",d:
+
 `Chữa Lành|Healing|Vết thương cũ trồi lên để được chữa. Đứng trần trụi, dễ tổn thương, cởi mở với cái chạm của hiện hữu. Khi hết trốn tránh, ta lành và giúp người lành.|Vết thương nào sẵn sàng được chạm vào?
+
 Tiếp Nhận|Receptivity|Nữ hoàng không đầu, không cái đầu bận rộn, tay giơ lên nhận và liên tục tuôn trào. Nhạy cảm, trực giác, từ bi xóa tan những rào cản.|Hôm nay hãy nhận mà không đòi hỏi.
+
 Tin Tưởng|Trust|Như nhảy bungee không dây. Không kế hoạch, không lưới an toàn; chỉ nhảy. Phía bên kia là sự dịu êm màu hồng chờ đón.|Bước nhảy nào bạn đang né?
+
 Thấu Hiểu|Understanding|Con chim nhìn ra song sắt đang biến mất; cái lồng vốn luôn mở. Run rẩy là tự nhiên; đừng để nó che mất sự nhẹ nhõm của tự do.|Cái lồng nào chỉ là ảo tưởng?
+
 Thân Thiện|Friendliness|Hai cây đan cành, mỗi cây cắm rễ riêng. Bạn bè thật: chín chắn, không cấp bách, không muốn đổi người kia. Chuyển từ drama sang tình thân dịu dàng.|Ai là người bạn bạn muốn gần hơn?
+
 Ăn Mừng|Celebration|Ba người nhảy giữa mưa gió: niềm vui không chờ ngày lễ hay trời đẹp. Nó khởi từ bên trong rồi tràn ra thành ca hát, múa, cả nước mắt biết ơn.|Cởi giày, nhảy trong vũng nước.
+
 Quay Vào Trong|Turning In|Người phụ nữ mỉm cười quan sát trò tâm trí như xe cộ trên đường, không phán xét hay đồng hóa. Thiền là quan sát như tâm trí của người khác.|Quan sát suy nghĩ như xem mây.
+
 Bám Víu Quá Khứ|Clinging to the Past|Ôm hộp kỷ niệm, quay lưng với ly champagne của hiện tại: ta nghèo dù có thể giàu. Quá khứ đã qua; lặp lại là mắc kẹt khuôn cũ.|Điều gì bạn đang cố sống lại?
+
 Giấc Mơ|The Dream|Mơ về “người trong mộng” sẽ lấp đầy mọi nhu cầu: là giấc mơ trẻ con bắt nguồn từ tử cung. Không ai nợ ta hạnh phúc; tình yêu thật là trưởng thành.|Bạn kỳ vọng ai làm bạn hạnh phúc?
+
 Phóng Chiếu|Projections|Hai người đối diện nhưng không thấy nhau, mỗi người chiếu hình ảnh tự dựng. Phóng chiếu dù tốt hay xấu vẫn là đám mây che thực tại; hãy nhận lại trách nhiệm.|Bạn đang gán điều gì lên người khác?
+
 Buông Bỏ|Letting Go|Giọt sương rơi khỏi lá sen, tan vào nước, mất danh tính cũ. Điều gì đó đang kết thúc; cho phép nỗi buồn mà không cố giữ.|Điều gì cần buông, dù biết buồn?
+
 Lười Biếng|Laziness|Ngồi ghế êm, kính râm, cocktail, tưởng đã đến đích trong khi gương nứt phía sau. Chim trắng nhắc rằng hành trình chưa hết. Tự mãn có thể là cái bẫy.|Bạn đang nghỉ vì đã đủ hay vì ngại?
+
 Hòa Hợp|Harmony|Trạng thái nghỉ trong trái tim khi thiền, không thể ép mà đến tự nhiên. Cá heo từ tim bay lên con mắt thứ ba: vui đùa và thông minh. Niềm vui khó diễn tả đang chờ.|Hãy mềm mại hơn trong một cuộc trò chuyện.
+
 Thuận Dòng|Going with the Flow|Thả lỏng nổi trên nước, thụ động mà không đờ đẫn, không nói “tôi thích hướng kia”. Mỗi khoảnh khắc ta chọn nổi hoặc bơi ngược dòng.|Chỗ nào bạn đang bơi ngược?`},
+
 {k:"C",n:"Mây",c:"var(--cloud)",d:
+
 `Kiểm Soát|Control|Kiểm soát có lúc cần, nhưng nếu nắm quyền thì ta cứng như xác ướp; nắm tay siết, mắt trống. Hít sâu, nới cà vạt, sai cũng không sao.|Bạn có thể bỏ kiểm soát điều gì?
+
 Đạo Đức Giả|Morality|Mọi thứ bị nhốt trong chiếc đầu “đúng/sai”, nữ hoàng thành quả mận khô. Những phán xét chỉ là điều kiện hóa, ngăn ta thấy vẻ đẹp thiêng liêng.|Bạn đang phán xét ai (kể cả bản thân)?
+
 Chiến Đấu|Fighting|Mặc giáp đầy nút bấm chờ nổ. Cơn giận che nỗi đau; áo giáp ngăn vết thương lành và ngăn tình yêu đến. Đã đến lúc ngừng chiến.|Sau cơn giận của bạn là nỗi đau nào?
+
 Cái Đầu|Mind|Khi tâm trí chạy việc đời, nhà máy lý lẽ gây ô nhiễm. Thử thu âm mọi điều trong đầu mà không kiểm duyệt, bạn sẽ ngạc nhiên. Ai đó đang kẹt trong đầu: có phải bạn?|Hôm nay tâm trí bạn nói chuyện gì nhiều nhất?
+
 Tâm Thần Phân Liệt|Schizophrenia|Treo lơ lửng giữa hai thái cực: tay buông hay chân buông? Quyết định nào cũng khiến ta tiếc. Lối ra là buông cả hai một lúc, nghe tim hơn lập bảng ưu nhược.|Hãy bỏ danh sách ưu/nhược và nghe tim.
+
 Đóng Băng|Ice-olation|Ta đóng cảm xúc để khỏi bị tổn thương, thành cứng đờ. Nước mắt cầu vồng là chìa khóa phá băng. Chỉ nước mắt mới tan được lớp băng.|Cảm xúc nào bạn đang giấu khỏi chính mình?
+
 Trì Hoãn|Postponement|Cô ở trong khung xám nhìn màu sắc bên ngoài nhưng “nếu như” giữ lại. Ngày mai không bao giờ đến; trì hoãn chỉ sinh nặng nề, dở dang.|Việc nào làm xong sẽ nhẹ lòng nhất?
+
 So Sánh|Comparison|Tre không ghen với sồi, sồi cũng không ước rỗng ruột như tre. Luôn có người hơn và kém bạn; biết mình qua so sánh là sai đường.|Hôm nay bạn so sánh mình với ai?
+
 Gánh Nặng|The Burden|Đeo “nên và không nên” của người khác, bạo chúa trên vai hối thúc “nhanh lên”. Hãy nhún vai rũ bỏ; núi riêng cần sức riêng.|Điều “phải” nào không thực sự của bạn?
+
 Chính Trị|Politics|Tâm trí vốn là chính trị gia: toan tính, thao túng. Con rắn nói lưỡi đôi; cả mặt ngọt ngào lẫn mặt độc ác đều là mặt nạ. Hãy kiểm tra xem bạn có chơi trò này.|Bạn có đeo mặt nạ để được thích không?
+
 Tội Lỗi|Guilt|Làm sai thì thấy tệ, nhưng chìm trong tội lỗi chỉ sinh đau đầu, tự nghi ngờ và mất sáng suốt. Trừng phạt mình không làm ta tốt hơn.|Bạn có thể sửa sai mà không tự phạt?
+
 Đau Buồn|Sorrow|Ananda ở bên Phật 42 năm khóc vì chưa đạt đạo, thức trắng đêm thiền sâu trong nỗi đau và sáng ra giác ngộ. Nỗi buồn lớn có thể mở cửa.|Hãy ở yên với nỗi đau, không chạy trốn.
+
 Tái Sinh|Rebirth|Ba giai đoạn của Nietzsche: lạc đà (ngủ, chiều ý người), sư tử (nói “không”, gầm lên) rồi đứa trẻ (ngây thơ, tự nhiên, thật là mình).|Bạn đang là lạc đà, sư tử hay đứa trẻ?
+
 Ý Thức|Consciousness|Trong bộ Mây toàn hình hài hài hước hay rắc rối, nhưng ở đây vị Phật khổng lồ vượt qua cả sao. Ai làm chủ tâm trí biến nó thành đầy tớ sẽ thấy sáng trong như pha lê.|Hôm nay tâm trí phục vụ bạn hay bạn phục vụ nó?`},
+
 {k:"R",n:"Cầu Vồng",c:"var(--rain)",d:
+
 `Dồi Dào|Abundance|Hình ảnh “Zorba Phật”: uống rượu, nhảy trên biển mà vẫn sâu sắc. Một tay cầm sen tôn vinh nữ tính, ngực mở, bụng thả lỏng, đầy đủ nam tính. Bốn nguyên tố hội tụ.|Bạn đang tận hưởng đời và trí tuệ cùng lúc chứ?
+
 Nở Hoa|Flowering|Nữ hoàng rực rỡ như cây hoa ở đỉnh, rải hạt khắp nơi vì mừng đời, không cần biết rơi vào đất hay đá. Hoa rơi xuống từ trời. Bạn là vườn hoa được ban phước.|Hạt giống nào bạn sẵn sàng gieo?
+
 Chậm Lại|Slowing Down|Như con rùa mang nhà theo mình, không cần vội, không cần đi tìm chỗ trú. Buông kỳ vọng, nhận trách nhiệm với ảo tưởng, nghỉ trong sự đủ đầy.|Bạn đang vội vì điều gì?
+
 Phiêu Lưu|Adventure|Đứa trẻ bước từ rừng tối ra ánh cầu vồng, đi từng bước giữa kỳ diệu. Phiêu lưu không cần bản đồ; có thể ở văn phòng hay thành phố.|Làm điều quen thuộc theo cách chưa từng.
+
 Từng Khoảnh Khắc|Moment to Moment|Bước nhẹ trên đá giữa dòng nước, thăng bằng và tỉnh táo, ở chợ mà đứng ngoài chợ. Bỏ phán xét, sở thích và dính mắc vào kế hoạch.|Hôm nay ở đâu thì ở trọn vẹn đó.
+
 Hướng Dẫn|Guidance|Thiên thần cầu vồng là người dẫn đường bên trong. Ta quen nghe bên ngoài nên ngập ngừng. Tiếng thì thầm ấy dẫn đến sự toàn vẹn.|Điều gì bạn đã biết nhưng chưa tin?
+
 Kẻ Hà Tiện|The Miser|Người phụ nữ xây pháo đài quanh kho báu, đến mức tự làm mình xấu đi. Không chỉ tiền: có thể là thời gian, tình yêu, lời nói. Giếng bít lại sẽ thành tù đọng.|Bạn đang giữ chặt điều gì?
+
 Kẻ Ngoài Cuộc|The Outsider|Đứa trẻ nhỏ đứng ngoài cổng, không biết xích chưa khóa, chỉ cần mở. Cảm giác bị bỏ rơi đến từ thời thơ ấu, lặp như cuốn băng. Hãy tắt nó đi.|Bạn có thể tự mở cánh cổng nào?
+
 Thỏa Hiệp|Compromise|Hoạn quan cung đình Nhật quyền lực sau hậu trường. Hiểu quan điểm khác là một chuyện, “cúi đầu” phản bội sự thật của mình là chuyện khác.|Bạn đang thỏa hiệp với điều gì trái lòng?
+
 Kiên Nhẫn|Patience|Có lúc chỉ cần chờ: hạt đã gieo, thai đã nằm, trai đang hóa ngọc. Người phụ nữ chờ dưới trăng, thanh thản, tỉnh thức chứ không buồn ngủ.|Điều gì cần thời gian chứ không cần ép?
+
 Bình Thường|Ordinariness|Vẻ đẹp nằm trong việc đơn giản: dọn nhà, làm vườn, nấu ăn thành thiêng khi làm trọn vẹn, vì chính nó. Cách tiếp cận tự nhiên hiệu quả hơn tỏ ra xuất chúng.|Làm việc nhà như thiền.
+
 Chín Muồi|Ripeness|Quả chín tự rụng, không bị ép cũng không nhảy xuống; cây nhận ra và thả. Bạn sẵn sàng chia sẻ “nước ngọt” của mình qua công việc và các mối quan hệ.|Bạn có thể chia sẻ thành quả nào?
+
 Chúng Ta Là Thế Giới|We Are the World|Nhân loại như cầu vồng các sắc thái, nắm tay nhảy quanh trái đất, không bám víu, không hơn kém. Cùng nguồn gốc ước mơ và nỗi sợ, ta góp phú quý thành kho báu yêu thương.|Điều gì bạn chia sẻ với mọi người xung quanh?
+
 Trưởng Thành|Maturity|Người đứng im, tỉnh táo, bên trong đầy hoa mùa xuân, di chuyển tự do trong lẫn ngoài. Vầng sáng trắng bảo vệ. Một món quà cho công sức xứng đáng; nền tảng đã vững.|Bạn đã trưởng thành ở điểm nào?`}
+
 ];
+
 var CT=["Vua","Nữ hoàng","Hiệp sĩ","Thị đồng","2","3","4","5","6","7","8","9","10","Ách"];
+
 var ALL=[];
+
 S.forEach(function(s,si){
+
  s.cards=s.d.split("\n").map(function(l,i){var p=l.split("|");
+
   var lab=s.k=="M"?s.lb[i]:(i<4?CT[i]+" "+s.n:(i==13?"Ách "+s.n:CT[i]+" "+s.n));
+
   return{lab:lab,vi:p[0],en:p[1],t:p[2],q:p[3],si:si,i:i};});
+
  s.cards.forEach(function(c){ALL.push(c)});
+
 });
 
+
+
 var SP=[
+
 {n:"Siêu Nhanh",en:"The Super Quickie",w:1,i:"Một lá duy nhất để thấu hiểu một tình huống, hoặc làm bài thiền của cả ngày.",p:[["Thông điệp cho tình huống / ngày hôm nay",1,1]]},
+
 {n:"Nghịch Lý",en:"The Paradox",w:3,i:"Xáo bài vài phút, chia làm ba xấp và chọn một xấp. Lá trên cùng là hiện tại, lá dưới cùng là ảnh hưởng tiền kiếp. Xòe phần còn lại, chọn thêm một lá cho cái nhìn về nghịch lý.",p:[["Ở đây – bây giờ (lá trên cùng)",1,1],["Ảnh hưởng tiền kiếp (lá dưới cùng)",2,1],["Thấu hiểu nghịch lý (lá chọn thêm)",3,1]]},
+
 {n:"Quan Hệ Nhanh",en:"Relating – A Quickie",w:2,i:"Cái nhìn nhanh vào mối quan hệ với người khác: sếp, người yêu, bạn bè, chị em, cha mẹ…",p:[["Bạn và điều bạn đóng góp cho mối quan hệ lúc này",1,1],["Người kia và phần đóng góp của họ",2,1],["Năng lượng tổng hợp của hai người",1,2],["Thấu hiểu (insight)",2,2]]},
+
 {n:"Viên Kim Cương",en:"The Diamond",w:3,i:"Dùng để làm rõ một vấn đề cụ thể.",p:[["Vấn đề",2,2],["Ảnh hưởng bên trong mà bạn chưa thấy",1,2],["Ảnh hưởng bên ngoài mà bạn đã biết",3,2],["Điều cần có để giải quyết",2,3],["Giải pháp: sự thấu hiểu",2,1]]},
+
 {n:"Chim Bay",en:"The Flying Bird",w:7,i:"Xếp hình chim cất cánh. Cánh trái là năng lượng nữ, tiếp nhận; cánh phải là năng lượng nam, chủ động. Lá đầu tiên khởi xướng chuyến bay, mỗi lá sau đáp lại lá trước và nâng “con chim” cao hơn vào sự sáng tỏ.",p:[["Ở đây – bây giờ: lá “cất cánh”",4,4],["Lá kháng cự: “nỗi sợ bay”",3,3],["Khả năng đáp ứng (response-ability) trước nỗi sợ",5,3],["Sự hỗ trợ bên trong (trực giác)",2,2],["Hỗ trợ bên ngoài (hành động thông minh đáp lại trực giác)",6,2],["Thư giãn và chấp nhận",1,1],["Đến mức nhận biết mới",7,1]]},
+
 {n:"Chìa Khóa",en:"The Key",w:3,i:"“Mở cửa” vào các tầng ẩn, vô thức của một vấn đề; cũng dùng như một lần đọc tổng quát về nội tâm ngay lúc này.",p:[["Điều bị đè nén",2,5],["Lá Âm: phần nữ (thụ động) của bạn",2,4],["Lá Dương: phần nam (chủ động) của bạn",3,4],["Thiền",2,3],["Hiểu biết về thân thể",1,2],["Hiểu biết về trái tim",2,2],["Hiểu biết về bản thể",3,2],["Ý thức (sự thấu hiểu)",2,1]]},
+
 {n:"Thập Tự Celtic",en:"The Celtic Cross",w:5,i:"Trải bài truyền thống để làm rõ một vấn đề cụ thể hoặc đọc tổng quát. Lá 2 đặt chéo lên lá 1.",p:[["Vấn đề",2,3],["Làm giảm/tăng vấn đề, hoặc làm rõ/che mờ vấn đề",2,3,"x"],["Ảnh hưởng vô thức",2,4],["Ảnh hưởng ý thức",2,2],["Khuôn mẫu cũ, lối cũ",1,3],["Khuôn mẫu mới, bước vào cái mới",3,3],["Bản thân: cảm xúc và thái độ về vấn đề",5,4],["Điều bạn thu hút từ bên ngoài",5,3],["Mong muốn / phủ nhận của bạn",5,2],["Kết quả / chìa khóa",5,1]]},
+
 {n:"Tấm Gương",en:"The Mirror",w:3,i:"Trải bài 12 lá để thấu hiểu khi có quan hệ với người khác (người yêu, bạn, người thân…). Nó cho thấy tiến trình sống của mỗi người và năng lượng tổng hợp của mối quan hệ. Các cặp: 1&4 thân thể, 2&5 trái tim, 3&6 tâm trí.",p:[["Bạn – thân thể (ở đây, bây giờ)",1,5],["Bạn – trái tim",1,4],["Bạn – tâm trí",1,3],["Người kia – thân thể",3,5],["Người kia – trái tim",3,4],["Người kia – tâm trí",3,3],["Hòa tan và hợp nhất (thân mật) · biểu hiện bên ngoài của quan hệ",2,6],["Giả kim của sự bên nhau (chuyển hóa) · biểu hiện bên ngoài",2,5],["Phước lành (lợi ích và quà tặng) · biểu hiện bên ngoài",2,4],["Hòa tan và hợp nhất · mục đích tâm linh bên trong",2,3],["Giả kim của sự bên nhau · mục đích tâm linh bên trong",2,2],["Phước lành · mục đích tâm linh bên trong",2,1]]}
+
 ];
 
+
+
 var SY=`Chim|Không khí, trí tưởng tượng, khả năng, hạnh phúc, linh hồn bước vào trạng thái ý thức cao hơn.
+
 Phật|Hoàn hảo, ý thức thuần khiết, tự chứng ngộ, trí tuệ tối thượng, từ bi, tĩnh lặng, vượt nhị nguyên.
+
 Bướm|Biến hóa, phù du, nhẹ nhàng, mong manh.
+
 Lạc đà|Tự mãn, vô minh, ngốc nghếch thất thường.
+
 Xiềng xích|Điều kiện, giới hạn, ranh giới.
+
 Đứa trẻ|Tiềm năng, giản dị, ngây thơ, niềm vui.
+
 Vòng tròn|Không gian thuần khiết, tinh thần, toàn thể, không đầu không cuối, hoàn hảo, tự đủ, thiên đường.
+
 Mây|Tâm trí (bản chất đổi thay), che phủ, ánh sáng và sự rõ ràng, phước lành ẩn, nặng nề hoặc nhẹ nhàng, không nghiêm trọng.
+
 Màu tím|Trí thông minh, cân bằng, bình đẳng (đỏ nóng + xanh mát).
+
 Màu đỏ|Sức mạnh, năng lượng, lửa, mặt trời, đam mê, tính dục, nam tính, nguyên lý chủ động.
+
 Màu hồng|Tình yêu, hoàn hảo (đỏ + trắng: sức mạnh, đam mê cộng với thanh khiết).
+
 Màu vàng kim|Chân lý, giác ngộ, huy hoàng.
+
 Màu trắng|Thanh khiết, hoàn hảo, ngây thơ, soi sáng, thiêng liêng, giản dị, dương.
+
 Màu đen|Hư không, cái chết, thời gian, đêm, lạnh, âm.
+
 Màu xanh dương|Nước, mát mẻ, chiều sâu, không gian, trời.
+
 Màu xám|Mây, đổi thay, trung tính (đi được mọi hướng), giữa sáng và tối.
+
 Màu xanh lá|Thiên nhiên, dồi dào, mùa xuân, đổi mới, sáng tạo (ấm áp cảm xúc + mát mẻ trí tuệ).
+
 Pha lê|Thấu suốt, sáng rõ.
+
 Chén|Mở, tiếp nhận, nữ tính, trái tim.
+
 Cá heo|Vui đùa, thông minh, nhạy cảm, dịu dàng, niềm vui.
+
 Đại bàng|Cảm hứng, sức mạnh, uy quyền, nguyên lý tinh thần, cầu nối trời – đất, nam tính, mặt trời, mở rộng.
+
 Đôi mắt|Mở: tỉnh thức. Nhắm: hướng nội hoặc ngủ mê.
+
 Lửa|Chuyển hóa, sức mạnh, năng lượng, đam mê, thanh tẩy, cảm hứng, nam tính.
+
 Hoa|Tiềm năng nở trọn, mở rộng, chia sẻ.
+
 Trái chín|Mọng nước, sung mãn, tinh chất.
+
 Tóc|Dài xõa: năng lượng, tự do tư tưởng, sinh lực. Cạo: từ bỏ vật chất. Rối: hoang mang, bất hạnh.
+
 Hào quang|Ánh sáng chân lý, rạng rỡ, sinh lực.
+
 Bàn tay trống|Mở, tiếp nhận, nữ tính.
+
 Hara|Trung tâm sinh lực nằm dưới rốn.
+
 Tranh ghép|Trò chơi cuộc đời: bức tranh trọn vẹn gồm nhiều mảnh nhỏ.
+
 Dao / Kiếm|Chia cắt, quyền lực, hung hăng, trí tuệ, cắt xuyên qua (sự rõ ràng).
+
 Lá cây|Xanh: sinh sôi, tái sinh. Thu: buông bỏ, trưởng thành.
+
 Tia chớp|Sét, mặc khải, cú sốc, quyền năng thiêng liêng, giác ngộ.
+
 Sư tử|Không sợ hãi, sức mạnh, cá tính riêng.
+
 Thằn lằn|Trí tuệ, bí mật, im lặng.
+
 Hoa sen|Hoa: kết quả hợp nhất các đối cực (ánh sáng và bóng tối), biểu tượng tinh thần và chuyển hóa. Lá: hoàn hảo, khai mở tâm linh.
+
 Bọ ngựa|Vui đùa, tìm hiểu không nghiêm trọng.
+
 Khỉ|Chuyển hóa, tinh nghịch, tò mò.
+
 Trăng|Bí ẩn, tái sinh bất tận, tri thức nội tâm. Trăng tròn: giác ngộ, sức hút nữ tính.
+
 Trăng và Mặt trời|Trời và đất, hôn phối thiêng liêng, vàng và bạc.
+
 Đêm|Bóng tối, điều chưa biết.
+
 Không đầu|Vô tâm, vượt ngoài suy nghĩ.
+
 Khỏa thân|Trong sáng, tự nhiên, không xấu hổ.
+
 Bát giác|Con số của tái sinh, hồi sinh.
+
 Cầu vồng|Cầu nối trời – đất, tinh thần và hữu hình, toàn phổ khả năng.
+
 Đá|Thử thách, rào cản, cứng nhắc.
+
 Hoa hồng|Trái tim. Hồng có gai: hoàn hảo và đam mê.
+
 Cừu|Điều kiện hóa, hiện trạng, đám đông.
+
 Rắn|Hồi xuân, tính dục, xảo quyệt, toàn thể, tự đủ, kết thúc là khởi đầu.
+
 Xoắn ốc|Sinh sôi, nguồn tái sinh, xoáy lốc, sự sống sáng tạo.
+
 Hình vuông|Cái hữu hình, đã biết, ổn định.
+
 Mặt trời|Quyền năng, thần tính, huy hoàng, trí tuệ, soi sáng, nam tính, nguồn sống.
+
 Hổ|Uy quyền, giàu có và thành tựu.
+
 Đuốc|Sự sống, chân lý, bất tử, trí tuệ.
+
 Rùa|Tự đủ, thoải mái cả trong nước (cảm xúc) lẫn trên cạn (vật chất).
+
 Cây|Nuôi dưỡng, bén rễ, dồi dào, che chở, tĩnh lặng, sức mạnh, bền bỉ.
+
 Tam giác|Bản chất ba ngôi của vũ trụ. Hướng lên: sự sống, nhiệt, nam, lá Vua, tinh thần. Hướng xuống: mặt trăng, nữ, tiếp nhận, lá Nữ hoàng, mát. Hướng trái: từ thụ động sang chủ động (Thị đồng). Hướng phải: từ chủ động vào bên trong (Hiệp sĩ).
+
 Bức màn|Ảo ảnh (maya), tối tăm, vô minh.
+
 Sao Kim|Tình yêu, đam mê, sáng tạo, nữ tính, tưởng tượng, tính dục.
+
 Gậy|Nâng đỡ, uy quyền, hành trình.
+
 Nước|Cảm xúc, chiều sâu, trực giác, dòng chảy, vô hình, tiềm năng, thanh tẩy, tử cung và sinh nở, nuôi dưỡng sự sống.
+
 Bánh xe|Thời gian, số phận, nghiệp, thay đổi.
+
 Đôi cánh|Tự do, bay vào cái chưa biết, siêu vượt thường nhật.
+
 Vòng hoa|Thành công, chiến thắng trên vật chất.
+
 Âm và Dương|Sự bổ sung của các đối cực. Mặt đen: sâu, tối, vô hình, linh hồn, trực giác, đêm, nữ. Mặt trắng: chủ động, ngày, nam, hữu hình, mở rộng, lý trí. Cùng nhau là cân bằng hoàn hảo của hai lực nền tảng.
+
 Hoàng đạo|Chu kỳ chuyển hóa, sự liên kết của hiện hữu (trời – đất), thế giới hiện tượng.`.split('\n').map(function(l){return l.split('|')});
 
+
+
 var MD=[
+
 {n:'1 · Thiền ngắm lá bài',t:'15 phút',c:['Hư Không','Tĩnh Lặng','Vượt Qua Ảo Tưởng'],s:['Xáo bài trong im lặng, dùng tay trái (tay tiếp nhận) rút một lá, đặt ở tầm mắt.','Nhìn bằng ánh mắt mềm trong 5 phút. Để hình ảnh thấm vào, chưa cần phân tích biểu tượng.','Khi tâm trí dán nhãn “đẹp/xấu”, “thích/không thích”, chỉ nhận ra rồi quay về với hình ảnh.','Nhắm mắt, giữ hình ảnh còn đọng lại cho đến khi nó tan.','Ngồi im 2 phút, rồi viết một từ mô tả điều bạn đang cảm thấy.']},
+
 {n:'2 · Thiền chứng nhân',t:'10 phút',c:['Tỉnh Thức','Quay Vào Trong','Ý Thức'],s:['Ngồi thẳng, thở tự nhiên, lá bài đặt trước mặt.','Quan sát suy nghĩ như xe cộ trên đường hoặc gợn sóng trên mặt hồ: không đẩy đi, không níu lại, không đồng hóa.','Mỗi lần bị cuốn theo câu chuyện, chỉ cần nhận ra “à, mình vừa bị cuốn” rồi quay về vị trí người xem.','Kết thúc bằng ba hơi thở sâu. Nhớ rằng bạn là chứng nhân im lặng, còn suy nghĩ chỉ là mây trôi.']},
+
 {n:'3 · Thiền nhập thân',t:'10–15 phút',c:['Kẻ Khờ','Dũng Cảm','Thuận Dòng','Bậc Thầy','Cô Độc An Nhiên'],s:['Quan sát kỹ tư thế, bàn tay, ánh mắt của nhân vật trong lá bài.','Đứng hoặc ngồi theo tư thế đó. Hít thở và cảm nhận nó ở đâu trong cơ thể: hara, ngực, đầu.','Để cơ thể tự chuyển động theo tinh thần lá bài trong 3 phút (bông hoa vươn ra ánh sáng, người trôi trên nước…).','Trở về tư thế trung tính, đứng yên một phút, rồi ghi lại điều cơ thể đã “nói”.']},
+
 {n:'4 · Khoảng lặng giữa hơi thở',t:'10 phút',c:['Hư Không','Tĩnh Lặng','Hòa Hợp'],s:['Đặt lá bài trước mặt, ngồi thoải mái, theo dõi hơi thở tự nhiên.','Chú ý khoảng ngưng nhỏ giữa hơi thở ra và hơi thở vào. Không nín thở, không kéo dài: chỉ nhận ra khoảng trống ấy.','Nếu hoang mang vì “không có gì để nắm”, nhớ rằng đó là trạng thái tiềm năng thuần khiết trước khi mọi thứ sinh ra.','Kết thúc: lòng bàn tay đặt lên bụng, cảm ơn sự yên lặng.']},
+
 {n:'5 · Một lá cho cả ngày (Siêu Nhanh)',t:'1 phút ba lần/ngày',c:['Từng Khoảnh Khắc','Trải Nghiệm','Bình Thường'],s:['Sáng: rút một lá, đọc bài giảng một lần, chọn một câu làm “thần chú” của ngày.','Giữa ngày: ba lần dừng lại, thở sâu và hỏi “lá này đang xuất hiện trong mình ở đâu?”.','Tối: viết ba dòng về nơi bạn nhớ hoặc quên bài học ấy, không phán xét.']},
+
 {n:'6 · Thiền vận động giải tỏa',t:'15–20 phút',c:['Đè Nén','Đột Phá','Kiệt Sức','Chiến Đấu','Điều Kiện Hóa','Sét Đánh'],s:['Dựa theo tinh thần thiền chủ động của Osho: xả bớt căng thẳng của thân và tâm trước, rồi mới yên lặng sẽ dễ hơn.','10 phút vận động tự do ở nơi riêng tư: lắc người, nhảy, chạy tại chỗ, múa, đập gối, nói “gibberish” (lảm nhảm vô nghĩa), la hét giữa thiên nhiên theo gợi ý các lá bài.','Chỉ giải tỏa lên đồ vật an toàn như gối, không làm đau bản thân hay người khác. Dừng ngay nếu chóng mặt, đau tức ngực hoặc đau khớp. Nếu có bệnh tim mạch, xương khớp, huyết áp, mang thai… hãy giảm cường độ hoặc hỏi bác sĩ trước.','5 phút nằm hoặc ngồi im để cơ thể tự lắng xuống, quan sát năng lượng đang chảy.']},
+
 {n:'7 · Thiền buổi tối',t:'10 phút',c:['Viên Mãn','Buông Bỏ','Chín Muồi','Tĩnh Lặng'],s:['Ngồi cuối ngày, hỏi: “Hôm nay điều gì đã hoàn tất?”. Rút một lá để ngẫm.','Ghi ba điều biết ơn và một điều bạn sẵn sàng buông.','Thở ra thật dài ba lần, như giọt sương rời lá sen. Đi ngủ không dùng màn hình.']},
+
 {n:'8 · Thiền thiên nhiên',t:'20–30 phút',c:['Hiện Hữu','Trải Nghiệm','Du Hành','Phiêu Lưu'],s:['Mang một lá bài ra công viên, bờ sông hoặc sân nhà, đi chậm không mục đích.','Chạm vào một thân cây bằng sự kính cẩn, như đang giao hòa chứ không “lấy kinh nghiệm”.','Nhìn trời, sao hoặc mây; nhận ra mình cũng là một phần của cuộc nhảy múa ấy.','Ngồi 5 phút cuối, đặt lá bài lên đất trước mặt và nói lời cảm ơn.']}];
 
+
+
 var IS=[
+
 {n:'Căng thẳng & kiệt sức',c:['Căng Thẳng','Kiệt Sức','Chậm Lại','Thuận Dòng','Nguồn Cội'],b:'Viết ra ba việc bạn tin “không có mình thì đổ vỡ”, rồi gạch một việc có thể nhờ người hoặc bỏ. Làm một việc “vô ích” có chủ đích (đi dạo, mua hoa) như lá Căng Thẳng gợi ý, và thử thiền số 4.',q:'Mình đang cố chứng minh điều gì? Nếu nghỉ một ngày, điều gì thật sự xảy ra?'},
+
 {n:'Lo âu & sợ thay đổi',c:['Thay Đổi','Sét Đánh','Hư Không','Tin Tưởng','Kẻ Khờ'],b:'Thực hành “di chuyển về tâm bão”: ngồi thở chậm 5 phút, nhắc “điều này cũng sẽ qua”. Liệt kê điều bạn kiểm soát được và điều không, rồi chỉ làm một bước nhỏ thuộc nhóm đầu.',q:'Nếu nỗi sợ này là một người đưa tin, nó muốn nói gì? Bước nhỏ nào làm mình thấy vững hơn?'},
+
 {n:'Tội lỗi & xấu hổ',c:['Tội Lỗi','Điều Kiện Hóa','Đạo Đức Giả','Ngây Thơ'],b:'Tách hai việc: điều cần sửa (một hành động cụ thể) và điều chỉ là sự tự trừng phạt. Làm một việc sửa sai hoặc xin lỗi, rồi nói với mình một câu như với người bạn thân.',q:'Tiếng nói “nên/không nên” này là của ai? Mình có thể sửa sai mà không tự hạ thấp mình không?'},
+
 {n:'Giận dữ & thù địch',c:['Chiến Đấu','Đè Nén','Đột Phá','Chữa Lành'],b:'Trước hết xả năng lượng an toàn (thiền số 6), sau đó mới viết thư không gửi: dưới cơn giận là nỗi đau nào? Chỉ nói chuyện với người kia khi cơ thể đã dịu.',q:'Bộ giáp này đang bảo vệ vết thương nào? Mình đang sợ bị tổn thương ở điểm nào?'},
+
 {n:'Cô đơn & bị gạt ra ngoài',c:['Cô Độc An Nhiên','Kẻ Ngoài Cuộc','Đóng Băng','Thân Thiện'],b:'Phân biệt cô đơn (thiếu kết nối) và tĩnh lặng một mình (tự chọn). Thử một hành động kết nối nhỏ: nhắn một người bạn, và cho phép cảm xúc xuất hiện nếu có nước mắt.',q:'Cánh cổng nào thật ra chưa khóa? Mình đang chờ ai mở thay mình?'},
+
 {n:'Tự ti & hay so sánh',c:['So Sánh','Điều Kiện Hóa','Kẻ Nổi Loạn','Nở Hoa'],b:'Trong một ngày, đánh dấu mỗi lần bạn so sánh mình với ai. Cuối ngày viết ba điều chỉ riêng bạn có, như tre và sồi không cần giống nhau.',q:'Ai đã dạy mình cách đo giá trị bản thân như vậy?'},
+
 {n:'Mất mát & đau buồn',c:['Đau Buồn','Buông Bỏ','Bám Víu Quá Khứ','Chữa Lành','Tái Sinh'],b:'Cho phép mình buồn trong một khoảng thời gian cố định mỗi ngày (ví dụ 15 phút), rồi làm một việc nuôi dưỡng thân thể. Không ép “phải vui”, cũng không ở một mình quá lâu nếu thấy chìm sâu.',q:'Mình đang tiếc điều gì? Điều gì vẫn ở lại với mình?'},
+
 {n:'Trì hoãn & bế tắc',c:['Trì Hoãn','Tâm Thần Phân Liệt','Gánh Nặng','Dũng Cảm'],b:'Chọn một việc đang trì hoãn và cam kết 10 phút đầu tiên, không cần xong. Nếu kẹt giữa hai lựa chọn, đừng lập bảng ưu/nhược nữa, hãy hỏi cơ thể: bên nào làm mình nhẹ hơn?',q:'Mình đang sợ điều gì nếu làm xong? “Phải” này có thật sự là của mình không?'},
+
 {n:'Rắc rối trong quan hệ',c:['Phóng Chiếu','Giấc Mơ','Những Người Yêu','Thỏa Hiệp','Thân Thiện'],b:'Dùng trải bài Tấm Gương hoặc Quan Hệ Nhanh. Viết điều bạn đang trách người kia, rồi đổi chủ ngữ thành “mình”: có phần nào đúng với mình không? Phân biệt thấu hiểu với việc phản bội sự thật của mình.',q:'Mình đang gán “bộ phim” nào lên người này? Mình mong họ mang lại điều gì mà thật ra mình có thể tự cho?'},
+
 {n:'Cầu toàn & kiểm soát',c:['Kiểm Soát','Căng Thẳng','Cái Đầu','Thuận Dòng'],b:'Cố tình làm một việc “chưa hoàn hảo” và quan sát cơ thể. Thực hành thở ra dài, nới lỏng vai, hàm, nắm tay. Lá Kiểm Soát nhắc: sai sót nhỏ cũng không sao.',q:'Điều gì tệ nhất xảy ra nếu mình để mọi thứ lộn xộn một chút?'},
+
 {n:'Suy nghĩ lặp & lo nghĩ',c:['Cái Đầu','Quay Vào Trong','Chính Trị','Ý Thức'],b:'Thử “thu âm” suy nghĩ: viết liên tục 5 phút mọi điều trong đầu không kiểm duyệt, rồi đọc lại với thái độ người ngoài cuộc. Sau đó thiền chứng nhân số 2.',q:'Bao nhiêu phần trăm những điều này có thật sự cần hành động? Phần nào chỉ là mây?'},
+
 {n:'Mất phương hướng & tìm ý nghĩa',c:['Tiếng Nói Bên Trong','Hướng Dẫn','Hư Không','Kẻ Khờ','Nguồn Cội'],b:'Ngồi yên với một lá, viết điều tim bạn thì thầm, không cần lý do. Chọn một thử nghiệm nhỏ, có thể đảo ngược trong tuần này, thay vì tìm “đáp án cả đời”.',q:'Nếu không ai đánh giá, mình sẽ chọn gì?'}];
 
+
+
 function mapR(){var M=S[0].cards.map(function(c){return c.vi});
+
  return `<div class='box'>Đại Bí Mật kể hành trình tâm linh của con người, từ Kẻ Khờ (số 0, “con số không số”) đến Viên Mãn. Bộ bài này thêm lá <b>Bậc Thầy</b> (không số), cho phép rời khỏi vòng xoắn tái sinh bằng cách tan cái tôi trong giác ngộ. Ba chặng dưới đây là cách chia của trang để dạy.</div>
+
 <details open><summary>Chặng 1 · Tin cậy và thức dậy (0 – VII)</summary><p>Ta bước đi bằng ngây thơ, tìm thấy tiếng nói bên trong, yêu và bắt đầu tỉnh thức.</p><p>${chips(M.slice(0,8))}</p></details>
+
 <details><summary>Chặng 2 · Thử thách và phá vỡ (VIII – XVI)</summary><p>Dũng cảm, cô độc, thay đổi, đột phá, chuyển hóa, điều kiện hóa… cho đến cú sét làm sụp những gì giả tạo.</p><p>${chips(M.slice(8,17))}</p></details>
+
 <details><summary>Chặng 3 · Về nhà và vượt qua (XVII – XXI, Bậc Thầy)</summary><p>Tĩnh lặng, nhìn thấu nghiệp, ngây thơ của người từng trải, vượt ảo ảnh, viên mãn và rời vòng xoắn.</p><p>${chips(M.slice(17))}</p></details>
+
 <details><summary>Bốn nguyên tố và bốn trung tâm bên trong</summary><ul><li><b style='color:var(--fire)'>Lửa</b>: hành động, năng lượng “theo bản năng” thay vì theo đầu óc hay cảm xúc. Nam tính, hướng ra ngoài.</li><li><b style='color:var(--water)'>Nước</b>: đời sống cảm xúc, trái tim; nữ tính, tiếp nhận.</li><li><b style='color:var(--cloud)'>Mây</b>: tâm trí, che mờ nhưng đến rồi đi, nên đừng quá nghiêm trọng.</li><li><b style='color:var(--rain)'>Cầu Vồng</b>: đời sống vật chất; cầu nối đất – trời, nhắc rằng việc đời thường cũng thiêng.</li></ul></details>
+
 <details><summary>Bốn lá Ách: bốn cội nguồn</summary><p>${chips(['Nguồn Cội','Thuận Dòng','Ý Thức','Trưởng Thành'])}</p><p>Mỗi bộ có một lá Ách như trạng thái trọn vẹn của nguyên tố ấy: năng lượng từ nguồn, thuận theo dòng, ý thức thuần khiết và sự trưởng thành bình thản.</p></details>
+
 <details><summary>Cung đình trở thành các cấp độ làm chủ</summary><p>Vua, Nữ hoàng, Hiệp sĩ, Thị đồng không còn là địa vị phong kiến mà là bốn cách làm chủ một nguyên tố. Trong ngôn ngữ biểu tượng: tam giác hướng lên là Vua (tinh thần, nam), hướng xuống là Nữ hoàng (tiếp nhận, nữ), hướng trái là Thị đồng (thụ động thành chủ động), hướng phải là Hiệp sĩ (chủ động đi vào bên trong).</p></details>
+
 <details><summary>Zorba the Buddha: tinh thần chung của bộ bài</summary><p>Osho mô tả con người mới là “Zorba the Buddha”: tận hưởng thú vui trần thế như Zorba người Hy Lạp, đồng thời có sự tĩnh lặng của Phật. Vì vậy trong bộ bài, cười đùa, thân xác, công việc, tình yêu và thiền đều là con đường. Phật không độc quyền của ai; ai cũng có thể là một vị Phật.</p></details>`}
 
+
+
 /* ================= UI & HỎI ĐÁP ================= */
+
 var $=function(i){return document.getElementById(i)};
+
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
 function rnd(n){return Math.floor(Math.random()*n)}
+
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+
 function first(t){var m=t.match(/^.*?[.!?](\s|$)/);return m?m[0].trim():t}
+
 function nz(s){return String(s).toLowerCase().replace(/đ/g,'d').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
+
 var DIA=/[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđ]/;
+
 var KEEP=/[^a-z0-9àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđ]+/g;
+
 function P(s){var l=String(s).toLowerCase().normalize('NFC');return{d:l.replace(KEEP,' ').trim(),s:nz(l),dia:DIA.test(l)}}
+
 function has(q,k){return k!==''&&(' '+q+' ').indexOf(' '+k+' ')>=0}
+
 function M(Q,k){return Q.dia?has(Q.d,k.d):has(Q.s,k.s)}
+
 var NI={};ALL.forEach(function(c,j){NI[c.vi]=j});
+
 function cl(n){return NI[n]!=null?"<button class='lk' data-a='card' data-j='"+NI[n]+"'>"+n+"</button>":esc(n)}
+
 function chips(a){return a.map(cl).join(' ')}
+
 function eln(c){var s=S[c.si];return s.k=='M'?'Đại Bí Mật':'Bộ '+s.n}
+
 function cardHTML(j){var c=ALL[j];return '<article class="cd" style="--c:'+S[c.si].c+'"><div class="k">'+eln(c)+' · '+c.lab+'</div><h2 class="cn">'+c.vi+'</h2><div class="en">'+c.en+'</div><p class="ct">'+c.t+'</p><div class="q"><b>Tự vấn</b>'+c.q+'</div></article>'}
 
+
+
 /* ---------- Sheet ---------- */
+
 var shEl=$('sh'),shLast=null;
+
 function openSheet(h,c){$('shb').innerHTML=h;var p=shEl.querySelector('.shp');p.style.setProperty('--c',c||'var(--gold)');shLast=document.activeElement;shEl.classList.add('on');shEl.setAttribute('aria-hidden','false');p.scrollTop=0;$('shx').focus()}
+
 function closeSheet(){shEl.classList.remove('on');shEl.setAttribute('aria-hidden','true');if(shLast&&shLast.focus){try{shLast.focus()}catch(e){}}}
+
 $('shx').onclick=closeSheet;
+
 shEl.addEventListener('click',function(e){if(e.target===shEl)closeSheet()});
 
+
+
 /* ---------- Pager (mỗi lần một mục) ---------- */
+
 function Pager(root,o){
+
  var me={i:0};
+
  root.innerHTML='<div class="pgb"></div><div class="pgn"><button class="pb" data-d="-1" aria-label="Trước">‹</button><div class="pgm" aria-live="polite"></div><button class="pb" data-d="1" aria-label="Sau">›</button></div>';
+
  var body=root.querySelector('.pgb'),mid=root.querySelector('.pgm'),bp=root.querySelector('[data-d="-1"]'),bn=root.querySelector('[data-d="1"]');
+
  function dots(i,n){var h='';for(var k=0;k<n;k++)h+='<span class="dot'+(k==i?' on':'')+'"></span>';return h}
+
  me.set=function(i,dir){var n=o.n();if(n<1){body.innerHTML=o.empty||'';mid.textContent='';return}
+
   i=Math.max(0,Math.min(n-1,i));var ch=i!=me.i||body.innerHTML==='';dir=dir||(i>=me.i?1:-1);me.i=i;
+
   body.innerHTML=o.render(i);body.classList.remove('l','r');void body.offsetWidth;if(ch)body.classList.add(dir>0?'r':'l');
+
   mid.innerHTML=n<=9?dots(i,n):(i+1)+' / '+n;bp.disabled=!o.wrap&&i==0;bn.disabled=!o.wrap&&i==n-1;if(o.on)o.on(i,body)};
+
  me.step=function(d){var n=o.n(),i=me.i+d;if(o.wrap&&n>0)i=(i+n)%n;me.set(i,d)};
+
  root.addEventListener('click',function(e){var b=e.target.closest('.pb');if(b&&root.contains(b))me.step(+b.dataset.d)});
+
  var sx=0,sy=0;
+
  body.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+
  body.addEventListener('touchend',function(e){var t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5)me.step(dx<0?1:-1)},{passive:true});
+
  me.set(o.start||0,1);return me}
+
 var PG={};
+
 document.addEventListener('keydown',function(e){
+
  if(e.key=='Escape'){closeSheet();return}
+
  if(e.key!='ArrowLeft'&&e.key!='ArrowRight')return;
+
  if(shEl.classList.contains('on')||/INPUT|TEXTAREA/.test(e.target.tagName))return;
+
  var p=PG[curV];if(p)p.step(e.key=='ArrowRight'?1:-1)});
 
+
+
 /* ---------- Điều hướng ---------- */
+
 var VIEWS=['ask','lib','spread','med','self','ref'],curV=null,INIT={},inited={};
+
 function go(v){if(VIEWS.indexOf(v)<0)v='ask';var prev=curV;curV=v;
+
  VIEWS.forEach(function(x){$('v-'+x).classList.toggle('on',x==v)});if(prev!==null&&prev!==v)$('v-'+v).scrollTop=0;
+
  [].forEach.call($('bar').querySelectorAll('button'),function(b){b.setAttribute('aria-current',b.dataset.v==v?'page':'false')});
+
  try{history.replaceState(null,'','#'+v)}catch(e){}store('oz-view',v);
+
  if(!inited[v]){inited[v]=1;INIT[v]()}}
+
 $('bar').onclick=function(e){var b=e.target.closest('button');if(b)go(b.dataset.v)};
 
+
+
 /* ---------- Giao diện sáng / tối ---------- */
+
 function isDark(){var t=document.documentElement.getAttribute('data-theme');return t?t=='dark':(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)}
+
 var th=store('oz-theme');if(th)document.documentElement.setAttribute('data-theme',th);
+
 $('btnTheme').onclick=function(){var d=!isDark();document.documentElement.setAttribute('data-theme',d?'dark':'light');store('oz-theme',d?'dark':'light')};
+
 $('btnInfo').onclick=function(){openSheet('<h2 class="h" style="margin-bottom:6px">Giới thiệu và lưu ý</h2>'+
+
  '<p>Trang giảng dạy phục vụ học tập. Nội dung dựa trên “Osho Zen Tarot: The Transcendental Game of Zen” (Osho International Foundation, minh họa: Deva Padma). Bài giảng được soạn lại bằng lời của riêng mình.</p>'+
+
  '<div class="lbl">Phần hỏi đáp hoạt động thế nào</div><p>Chạy ngay trên trình duyệt của bạn: hiểu câu bạn viết bằng từ khóa tiếng Việt (có hoặc không dấu), nối với 79 lá, bài tập, bài thiền và chủ đề tự soi. Nội dung bạn gõ không bị gửi đi đâu. Đây không phải trí tuệ nhân tạo tự do, nên có lúc mình sẽ hỏi lại để hiểu rõ hơn.</p>'+
+
  '<div class="lbl">Cài thành ứng dụng trên điện thoại</div><p>Bấm biểu tượng mũi tên tải xuống ở đầu trang để xem cách cài. iPhone: mở bằng Safari, bấm Chia sẻ, chọn “Thêm vào Màn hình chính”. Android: mở bằng Chrome, bấm menu ba chấm, chọn “Cài đặt ứng dụng”. Cần mở qua link https, không mở trực tiếp tệp. Mọi thứ bạn làm (cuộc trò chuyện, lá đang xem, trải bài, giao diện) được lưu ngay trên máy này; xóa dữ liệu trình duyệt thì sẽ mất.</p><div class="row"><button class="btn ghost" data-a="newchat">Xóa cuộc trò chuyện</button></div>'+
+
  '<div class="warn" style="margin-top:12px"><b>Lưu ý quan trọng:</b> bộ bài là công cụ tự phản chiếu và chú tâm, không phải phương pháp chẩn đoán hay điều trị. Nó không thay thế bác sĩ, nhà tâm lý hay thuốc. Không tự ý bỏ hoặc đổi thuốc theo lá bài. Nếu bạn buồn, lo âu kéo dài, mất ngủ nhiều ngày, từng chấn thương nặng hoặc có ý nghĩ làm hại bản thân, hãy gặp chuyên gia sức khỏe tâm thần hoặc bác sĩ, và nói với người thân. Trong tình huống nguy cấp, gọi cấp cứu (115 tại Việt Nam) hoặc đến cơ sở y tế gần nhất.</div>')};
 
+
+
 /* ---------- Chủ đề (cho hỏi đáp và tự soi) ---------- */
+
 var CARE='Nếu cảm giác này kéo dài nhiều ngày hoặc ảnh hưởng đến ăn ngủ, công việc, hãy trò chuyện với bác sĩ hoặc chuyên gia tâm lý. Trang này chỉ hỗ trợ tự phản chiếu, không thay thế điều trị.';
+
 var LX=[
+
 {k:['căng thẳng','stress','áp lực','quá tải','kiệt sức','mệt mỏi','mệt','burnout','bận rộn','deadline','hết năng lượng','cạn năng lượng','không có thời gian','làm việc nhiều'],med:[3,6],sp:3,care:1,ref:'Có vẻ bạn đang gánh nhiều hơn sức mình, và cơ thể lẫn tâm trí đã bắt đầu báo hiệu. Đây là lúc nới tay, chứ chưa phải lúc cố thêm.'},
+
 {k:['lo âu','lo lắng','lo','sợ','sợ hãi','hồi hộp','bất an','hoảng','hoảng loạn','panic','bồn chồn','lo sợ','không chắc chắn','bất định','tương lai','sợ thay đổi','thay đổi'],med:[1,3],sp:4,care:1,ref:'Lo âu thường đến khi tâm trí chạy trước tới những điều chưa xảy ra. Không cần dẹp nó đi; chỉ cần quan sát nó và đưa sự chú ý về hơi thở, về bước nhỏ ngay trước mặt.'},
+
 {k:['tội lỗi','xấu hổ','hối hận','ân hận','có lỗi','tự trách','day dứt','hổ thẹn','làm sai','mắc lỗi','tự trừng phạt','nhục nhã'],med:[1,6],sp:5,ref:'Có vẻ bạn đang tự đặt mình lên “tòa án” bên trong. Nhận ra điều cần sửa là một chuyện, tự trừng phạt mình lại là chuyện khác.'},
+
 {k:['giận','tức giận','phẫn nộ','cáu gắt','cáu kỉnh','bực','bực bội','ghét','căm','nổi nóng','nóng giận','oán giận','thù hận','điên lên'],med:[5,3],sp:3,ref:'Cơn giận thường là chiếc áo giáp che một nỗi đau hay nỗi sợ bên dưới. Trước hết hãy cho năng lượng ấy một lối ra an toàn, rồi mới nhìn xem nó đang bảo vệ điều gì.'},
+
 {k:['cô đơn','cô độc','một mình','lẻ loi','bị bỏ rơi','bị gạt ra','bị cô lập','không ai hiểu','không có bạn','trống trải','lạc lõng','không thuộc về'],med:[0,7],sp:0,care:1,ref:'Cảm giác bị tách khỏi mọi người rất nặng nề. Có thể phân biệt cô đơn (thiếu kết nối) với tĩnh lặng một mình (tự chọn), rồi thử một bước kết nối thật nhỏ.'},
+
 {k:['tự ti','so sánh','kém cỏi','không đủ giỏi','không xứng','ghen tị','ghen tỵ','đố kỵ','thua kém','không bằng','giá trị bản thân','mặc cảm','vô dụng','thấy mình tệ'],med:[2,0],sp:0,ref:'Khi so sánh, ta đo mình bằng chiếc thước của người khác. Tre và sồi là hai loài cây khác nhau, không cần giống nhau mới có giá trị.'},
+
 {k:['mất mát','đau buồn','buồn','buồn bã','mất người thân','qua đời','chia tay','tan vỡ','thất tình','đau lòng','tiếc nuối','nhớ nhung','ly hôn','mất việc','khóc','tang'],med:[6,0],sp:0,care:1,ref:'Mất mát cần thời gian và chỗ để được đau. Bạn không phải ép mình vui; có thể cho nỗi buồn một khoảng riêng, rồi nuôi dưỡng cơ thể bằng những việc nhỏ.'},
+
 {k:['trì hoãn','bế tắc','chần chừ','mắc kẹt','kẹt','không động lực','thiếu động lực','không có hứng','uể oải','lười','đình trệ','không biết bắt đầu','nản','chán nản'],med:[4,1],sp:3,ref:'Trì hoãn thường không phải lười, mà là sợ điều gì đó đứng sau việc ấy, hoặc đang kẹt giữa hai hướng. Thường chỉ cần một bước rất nhỏ để bắt đầu.'},
+
 {k:['người yêu','chồng','vợ','bạn trai','bạn gái','mối quan hệ','quan hệ','cãi nhau','cãi vã','xung đột','hiểu lầm','bạn bè','đồng nghiệp','ghen','ngoại tình','phản bội','tình yêu','hẹn hò','mâu thuẫn','không hiểu nhau','đối phương','yêu'],med:[1,4],sp:2,ref:'Trong quan hệ, ta hay nhìn người kia qua “bộ phim” của riêng mình. Chiếc gương có thể giúp tách điều thuộc về họ và điều thuộc về bạn.'},
+
 {k:['cầu toàn','hoàn hảo','kiểm soát','phải đúng','sợ sai','sợ mắc lỗi','khắt khe','không buông được','kiểm tra lại','ép bản thân','nghiêm khắc với bản thân','đòi hỏi bản thân'],med:[3,1],sp:5,ref:'Muốn mọi thứ hoàn hảo cũng là cách ta tự siết mình. Thử nới tay một chút, cho phép sai sót nhỏ xuất hiện và quan sát cơ thể.'},
+
 {k:['suy nghĩ nhiều','nghĩ nhiều','nghĩ mãi','suy nghĩ lặp','lo nghĩ','đầu óc','tâm trí','ồn ào','không ngừng nghĩ','overthinking','nghĩ quẩn','suy diễn','không tắt được','cứ nghĩ','quay cuồng','rối trí'],med:[1,3],sp:5,care:1,ref:'Tâm trí có thể thành nhà máy chạy không ngừng. Bạn không phải là những suy nghĩ ấy; bạn là người đang quan sát chúng.'},
+
 {k:['mất phương hướng','ý nghĩa cuộc sống','ý nghĩa','không biết mình muốn gì','lạc lối','chán đời','trống rỗng','mục đích sống','sống để làm gì','định hướng','ngã rẽ','không biết làm gì','hoang mang','tìm bản thân','mình là ai'],med:[0,7],sp:5,care:1,ref:'Cảm giác mờ mịt thường báo rằng lối cũ đã chật mà lối mới chưa hiện ra. Thay vì tìm đáp án cả đời, hãy thử một bước nhỏ, đảo ngược được.'}];
+
 var XT=[
+
 {n:'Công việc & sự nghiệp',k:['công việc','sự nghiệp','sếp','thăng tiến','nghỉ việc','chuyển việc','khởi nghiệp','dự án','kinh doanh','đi làm','công ty','thất nghiệp','việc làm','nghề nghiệp','nghề'],c:['Trọn Vẹn','Thành Công','Sáng Tạo','Thỏa Hiệp','Từng Khoảnh Khắc'],med:[4,1],sp:3,ref:'Công việc chiếm phần lớn ngày của bạn, nên nó thường là nơi cả ước mơ lẫn áp lực cùng hiện ra.',b:'Trong một ngày, làm từng việc một với sự chú tâm trọn vẹn (lá Trọn Vẹn): xong việc này mới sang việc khác. Cuối ngày ghi hai điều: việc nào làm bạn thấy sống động, và việc nào bạn làm chỉ vì “phải”.',q:'Nếu bỏ qua ý kiến của mọi người, bạn muốn công việc này nuôi dưỡng phần nào trong bạn?'},
+
 {n:'Quyết định & phân vân',k:['quyết định','phân vân','lựa chọn','chọn','nên hay không','nên chọn','đắn đo','lưỡng lự','do dự','không biết chọn','ngã ba','cân nhắc','hai lựa chọn','nên làm gì'],c:['Tâm Thần Phân Liệt','Tiếng Nói Bên Trong','Tin Tưởng','Khả Năng','Hướng Dẫn'],med:[3,0],sp:3,ref:'Đứng giữa hai lựa chọn, tâm trí thường lập đi lập lại bảng được và mất mà không đi đến đâu. Thân thể đôi khi biết trước bạn một nhịp.',b:'Thử “sống thử” trong đầu hai ngày: ngày thứ nhất coi như đã chọn A, ngày thứ hai coi như đã chọn B. Sau mỗi ngày, hỏi cơ thể: nhẹ hơn hay nặng hơn? Rồi chọn một bước nhỏ có thể đảo ngược. Với quyết định lớn về y tế, pháp lý, tài chính, hãy hỏi chuyên gia.',q:'Nếu biết chắc không ai phán xét, mình sẽ chọn gì? Cơ thể nghiêng về phía nào?'},
+
 {n:'Tiền bạc & sự đủ đầy',k:['tiền','tiền bạc','nợ','tài chính','thu nhập','giàu','nghèo','tiết kiệm','đầu tư','thiếu tiền','kiếm tiền','sợ nghèo','keo kiệt','chi tiêu'],c:['Dồi Dào','Kẻ Hà Tiện','Chia Sẻ','Bình Thường','Chín Muồi'],med:[7,6],sp:3,care:'Bộ bài không thay lời khuyên tài chính. Các quyết định lớn về tiền hãy cân nhắc kỹ và hỏi chuyên gia.',ref:'Chuyện tiền bạc hiếm khi chỉ là con số; nó chạm vào cảm giác an toàn, giá trị và nỗi sợ thiếu thốn.',b:'Viết ra điều bạn đang giữ chặt (tiền, thời gian, tình cảm) và một việc nhỏ có thể cho đi hôm nay mà không tính toán. Quan sát cảm giác trong cơ thể khi cho và khi giữ.',q:'Mình sợ mất điều gì nếu nới lỏng tay? Điều gì thật sự đã đủ?'},
+
 {n:'Gia đình & cha mẹ',k:['gia đình','cha mẹ','bố mẹ','ba mẹ','mẹ','bố','cha','con cái','anh chị','em gái','em trai','ông bà','nhà chồng','nhà vợ','tuổi thơ','thời thơ ấu'],c:['Điều Kiện Hóa','Gánh Nặng','Kẻ Ngoài Cuộc','Chữa Lành','Trưởng Thành'],med:[0,6],sp:2,ref:'Gia đình là nơi ta học những “nên” và “không nên” đầu tiên, vì vậy các mối dây ở đây thường vừa ấm vừa nặng.',b:'Viết ra ba câu “nên/không nên” bạn đã nhận từ gia đình. Với mỗi câu hỏi: “Điều này còn đúng với mình bây giờ không?” Giữ lại điều nuôi dưỡng, nhẹ nhàng đặt xuống điều không còn hợp.',q:'Niềm tin nào trong mình là của cha mẹ, niềm tin nào là của chính mình?'},
+
 {n:'Giấc ngủ & nghỉ ngơi',k:['mất ngủ','khó ngủ','ngủ không được','trằn trọc','thức khuya','ngủ không ngon','giấc ngủ','thao thức','ngủ'],c:['Tĩnh Lặng','Cái Đầu','Quay Vào Trong','Thuận Dòng','Chậm Lại'],med:[6,3],sp:0,care:'Mất ngủ kéo dài nhiều tuần nên được bác sĩ thăm khám. Bộ bài và thiền không thay thế điều trị.',ref:'Giấc ngủ khó đến thường vì đầu óc còn chưa được “tan ca”. Cơ thể cần một nghi thức nhỏ để biết ngày đã khép lại.',b:'Một tiếng trước khi ngủ: tắt màn hình, ghi ra mọi điều đang quay trong đầu rồi gấp lại “để mai”. Thở ra dài ba lần, quan sát hơi thở như sóng. Thử thiền buổi tối.',q:'Điều gì trong đầu mình đang chờ được ghi nhận trước khi chịu yên?'},
+
 {n:'Niềm vui & biết ơn',k:['vui','hạnh phúc','biết ơn','vui vẻ','an yên','bình yên','hài lòng','ăn mừng','tận hưởng','thư giãn','mừng'],c:['Ăn Mừng','Vui Đùa','Nở Hoa','Dồi Dào','Bình Thường'],med:[4,7],sp:0,ref:'Thật đẹp khi có điều đáng mừng. Niềm vui cũng cần được chú ý thì mới ở lại lâu.',b:'Dừng lại ba lần trong ngày, gọi tên một điều nhỏ đang tốt đẹp và để cơ thể cảm nhận nó trong ba hơi thở. Làm một điều vui chơi không cần mục đích.',q:'Bây giờ có điều gì đã đủ mà mình chưa kịp nhìn thấy?'},
+
 {n:'Thực hành thiền',k:['thiền','thiền định','tập thiền','ngồi thiền','meditation','cách thiền','tĩnh tâm','chánh niệm','mindfulness'],c:['Tỉnh Thức','Hư Không','Tĩnh Lặng','Quay Vào Trong'],med:[0,1,3,6],sp:0,ref:'Trong sách, thiền không phải để “đạt” điều gì, chỉ là quan sát không phán xét. Bộ bài là đối tượng để ngắm, nhập thân hay lắng nghe.',b:'Chọn một bài thiền ngắn (thiền ngắm lá bài hoặc khoảng lặng giữa hơi thở), ngồi thoải mái, tắt thông báo, và để mỗi lần tâm trí đi xa chỉ là một lần quay về nhẹ nhàng.',q:'Mình đang tìm sự yên lặng, hay đang muốn trốn một điều gì?'},
+
 {n:'Dũng khí & khởi đầu mới',k:['bắt đầu','dám','can đảm','dũng cảm','mạo hiểm','ước mơ','đam mê','phiêu lưu','khởi đầu mới','bước ra','vùng an toàn'],c:['Kẻ Khờ','Dũng Cảm','Phiêu Lưu','Tin Tưởng','Kẻ Nổi Loạn'],med:[2,7],sp:4,ref:'Bước vào điều mới thường đi kèm run rẩy, và run rẩy là tự nhiên. Không cần hết sợ mới đi được.',b:'Chọn một bước nhỏ, rẻ và đảo ngược được (một buổi học thử, một tin nhắn), làm trong 48 giờ. Đừng chờ “chắc chắn” mới đi.',q:'Việc nào mình đang chờ “chắc chắn” mới dám bắt đầu?'}];
+
 var TOP=IS.map(function(s,i){var x=LX[i];return{n:s.n,c:s.c,b:s.b,q:s.q,k:x.k,med:x.med,sp:x.sp,ref:x.ref,care:x.care}}).concat(XT);
+
 TOP.forEach(function(t){t.kk=t.k.map(function(k){return{k:P(k),w:k.indexOf(' ')>0?2:1}});if(t.care===1)t.care=CARE});
+
 var SPU=['Một lá cho một tình huống, hoặc làm bài thiền của cả ngày.','Khi muốn nhìn một nghịch lý hay mâu thuẫn bên trong: hiện tại, ảnh hưởng tiền kiếp và cái thấu hiểu.','Nhìn nhanh một mối quan hệ: người yêu, bạn bè, cha mẹ, sếp…','Khi cần làm rõ một vấn đề cụ thể và tìm lối ra.','Khi đang đứng trước một nỗi sợ và muốn thấy bước cất cánh.','Khi muốn mở các tầng ẩn, vô thức của một vấn đề.','Làm rõ một vấn đề cụ thể hoặc đọc tổng quát; trải bài truyền thống.','Khi muốn hiểu sâu một mối quan hệ ở cả thân, tim và tâm trí.'];
 
+
+
 /* ---------- Thư viện: mỗi lần một lá ---------- */
+
 var lib={f:-1,pg:null};
+
 function libIdx(){var a=[];ALL.forEach(function(c,j){if(lib.f<0||c.si==lib.f)a.push(j)});return a}
+
 function relHTML(vi){var r=[];TOP.forEach(function(t,i){if(t.c.indexOf(vi)>=0)r.push("<button class='lk' data-a='topic' data-t='"+i+"'>"+esc(t.n)+"</button>")});return r.length?'<div class="lbl">Chủ đề liên quan</div><p>'+r.join(' ')+'</p>':''}
+
 function libChips(){var h='<button aria-pressed="'+(lib.f<0)+'" data-f="-1">Tất cả (79)</button>';S.forEach(function(s,i){h+='<button style="--c:'+s.c+'" aria-pressed="'+(lib.f==i)+'" data-f="'+i+'">'+s.n+' ('+s.cards.length+')</button>'});$('libf').innerHTML=h}
+
 INIT.lib=function(){
+
  libChips();
+
  var sv=store('oz-card');
+
  lib.pg=PG.lib=Pager($('libp'),{wrap:1,start:(sv!==null&&sv!==''&&+sv>=0&&+sv<79)?+sv:0,n:function(){return libIdx().length},render:function(i){var j=libIdx()[i];store('oz-card',j);return cardHTML(j)+relHTML(ALL[j].vi)}});
+
  $('libf').onclick=function(e){var b=e.target.closest('button');if(!b)return;var cur=libIdx()[lib.pg.i];lib.f=+b.dataset.f;libChips();var k=libIdx().indexOf(cur);lib.pg.set(k>=0?k:0,1)};
+
  $('libRand').onclick=function(){lib.pg.set(rnd(libIdx().length),1)};
+
  $('libAsk').onclick=function(){askAbout('Lá '+ALL[libIdx()[lib.pg.i]].vi+' nghĩa là gì?')};
+
  $('libList').onclick=function(){
+
   openSheet('<h2 class="h" style="margin-bottom:8px">Danh sách 79 lá</h2><input class="srch" id="lq" placeholder="Tìm lá: tên tiếng Việt hoặc tiếng Anh…" aria-label="Tìm lá"><div class="gl" id="lg"></div>');
+
   function draw(q){q=P(q||'');var o='';ALL.forEach(function(c,j){if(!q.s||P(c.vi+' '+c.en+' '+c.lab).s.indexOf(q.s)>=0)o+='<button style="--c:'+S[c.si].c+'" data-a="lib" data-j="'+j+'"><small>'+c.lab+'</small>'+c.vi+'</button>'});$('lg').innerHTML=o||'<p class="mu">Không tìm thấy.</p>'}
+
   draw('');$('lq').oninput=function(){draw(this.value)}}};
+
 function libOpen(j){go('lib');if(lib.f>=0&&ALL[j].si!=lib.f){lib.f=-1;libChips()}lib.pg.set(libIdx().indexOf(j),1)}
+
 function showCard(j){var c=ALL[j];openSheet(cardHTML(j)+'<div class="row"><button class="btn" data-a="lib" data-j="'+j+'">Mở trong Thư viện</button><button class="btn ghost" data-a="askcard" data-j="'+j+'">Hỏi về lá này</button></div>'+relHTML(c.vi),S[c.si].c)}
 
+
+
 /* ---------- Trải bài ---------- */
+
 var sp={i:0,drawn:null,pg:null};
+
 INIT.spread=function(){
+
  try{var o=JSON.parse(store('oz-sp')||'null');if(o&&SP[o.i]){sp.i=o.i;if(Array.isArray(o.drawn)&&o.drawn.length==SP[o.i].p.length&&o.drawn.every(function(x){return x>=0&&x<79}))sp.drawn=o.drawn}}catch(e){}
+
  var h='';SP.forEach(function(s,i){h+='<button aria-pressed="'+(i==sp.i)+'" data-i="'+i+'">'+s.n+' ('+s.p.length+')</button>'});$('spseg').innerHTML=h;
+
  $('spseg').onclick=function(e){var b=e.target.closest('button');if(b){sp.i=+b.dataset.i;sp.drawn=null;spRender()}};
+
  $('spbody').addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(!b)return;
+
   if(b.dataset.k=='draw'){var a=[],n=SP[sp.i].p.length;while(a.length<n){var r=rnd(79);if(a.indexOf(r)<0)a.push(r)}sp.drawn=a;spRender();$('v-spread').scrollTop=0}
+
   else if(b.dataset.k=='sum'){var s=SP[sp.i],o='<h2 class="h" style="margin-bottom:8px">'+s.n+': tổng quan</h2><ol class="pl">';s.p.forEach(function(p,i){o+='<li>'+esc(p[0])+' → '+cl(ALL[sp.drawn[i]].vi)+'</li>'});openSheet(o+'</ol>')}});
+
  $('spmap').addEventListener('click',function(e){var b=e.target.closest('.pos');if(b&&sp.drawn&&sp.pg)sp.pg.set(+b.dataset.n,1)});
+
  spRender()};
+
 function spOpen(i){go('spread');sp.i=i;sp.drawn=null;[].forEach.call($('spseg').children,function(b,k){b.setAttribute('aria-pressed',k==i)});spRender()}
+
 function spRender(){spRender0();store('oz-sp',JSON.stringify({i:sp.i,drawn:sp.drawn}))}
+
 function spRender0(){var s=SP[sp.i];[].forEach.call($('spseg').children,function(b,k){b.setAttribute('aria-pressed',k==sp.i)});
+
  $('spinfo').innerHTML='<div class="panel"><h2 class="h" style="font-size:1.25rem">'+s.n+' <small class="mu" style="font-family:Inter,sans-serif;font-size:.8rem">· '+s.en+'</small></h2><p>'+s.i+'</p><p class="mu" style="font-size:.9rem"><b>Dùng khi:</b> '+SPU[sp.i]+'</p></div>';
+
  var m='';s.p.forEach(function(p,i){var c=sp.drawn?ALL[sp.drawn[i]]:null;m+='<button class="pos'+(c?' f':'')+(p[3]?' x':'')+'" data-n="'+i+'" '+(c?'style="--c:'+S[c.si].c+';grid-column:'+p[1]+';grid-row:'+p[2]+'" title="'+c.vi+'"':'style="grid-column:'+p[1]+';grid-row:'+p[2]+'"')+'>'+(i+1)+'</button>'});
+
  var sm=$('spmap');sm.style.gridTemplateColumns='repeat('+s.w+',minmax(0,1fr))';sm.style.maxWidth=(s.w*76)+'px';sm.innerHTML=m;
+
  if(!sp.drawn){PG.spread=sp.pg=null;var o='<div class="box">Hít thở ba nhịp, đặt một câu hỏi mở (“Mình cần nhìn thấy gì về…?”), rồi bấm Trải bài. Hãy ở lại với những lá đầu tiên, đừng rút lại.</div><ol class="pl">';s.p.forEach(function(p){o+='<li>'+esc(p[0])+'</li>'});$('spbody').innerHTML=o+'</ol><div class="row"><button class="btn" data-k="draw">Trải bài</button></div>';return}
+
  $('spbody').innerHTML='<div id="sppg"></div><div class="row"><button class="btn ghost" data-k="sum">Xem tổng quan</button><button class="btn ghost" data-k="draw">Trải lại</button></div>';
+
  sp.pg=PG.spread=Pager($('sppg'),{n:function(){return s.p.length},render:function(i){return '<div class="lbl">Vị trí '+(i+1)+' / '+s.p.length+'</div><div class="pt">'+esc(s.p[i][0])+'</div>'+cardHTML(sp.drawn[i])},on:function(i){[].forEach.call($('spmap').children,function(b,k){b.classList.toggle('cur',k==i)})}})}
 
+
+
 /* ---------- Thiền: hướng dẫn từng bước ---------- */
+
 var md={i:0,guide:false};
+
 INIT.med=function(){
+
  var mv=+store('oz-med');if(mv>=0&&mv<MD.length)md.i=mv;
+
  var h='';MD.forEach(function(m,i){h+='<button aria-pressed="'+(i==md.i)+'" data-i="'+i+'">'+m.n.replace(' · ',' · ').replace(/\s*\(.*\)$/,'')+'</button>'});$('medseg').innerHTML=h;
+
  $('medseg').onclick=function(e){var b=e.target.closest('button');if(b){md.i=+b.dataset.i;md.guide=false;medRender()}};
+
  $('medbody').addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(!b)return;
+
   if(b.dataset.k=='start'){md.guide=true;medRender()}else if(b.dataset.k=='stop'){md.guide=false;medRender()}
+
   else if(b.dataset.k=='draw'){showCard(rnd(79))}});
+
  medRender()};
+
 function medOpen(i,g){go('med');md.i=i;md.guide=!!g;medRender()}
+
 function medRender(){store('oz-med',md.i);var m=MD[md.i];[].forEach.call($('medseg').children,function(b,k){b.setAttribute('aria-pressed',k==md.i)});
+
  $('medseg').style.display=md.guide?'none':'flex';
+
  $('medhead').innerHTML=md.guide?'':'<p class="sub">Chọn một bài, đọc lướt rồi bấm Bắt đầu để được dẫn từng bước.</p>';
+
  if(!md.guide){PG.med=null;$('medbody').innerHTML='<div class="panel"><h2 class="h" style="font-size:1.3rem">'+m.n+'</h2><p class="mu">Thời lượng: '+m.t+'</p><div class="lbl">Lá gợi ý</div><p>'+chips(m.c)+'</p><div class="lbl">Các bước</div><ol class="st">'+m.s.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ol><div class="row"><button class="btn" data-k="start">Bắt đầu hướng dẫn</button></div></div><div class="note">Chuẩn bị chung: chọn nơi yên tĩnh, tắt thông báo, ngồi thoải mái. Thiền không phải để “đạt” điều gì, chỉ là quan sát không phán xét.</div>';return}
+
  var n=m.s.length+2;
+
  $('medbody').innerHTML='<div class="row" style="margin:0 0 6px;justify-content:space-between;align-items:center"><b style="font-family:Lora,serif">'+m.n+'</b><button class="btn ghost" data-k="stop" style="padding:6px 14px">Thoát</button></div><div id="mgpg"></div>';
+
  PG.med=Pager($('mgpg'),{n:function(){return n},render:function(i){
+
   if(i==0)return '<div class="panel" style="text-align:center"><div class="br"><span class="i">Hít vào</span><span class="o">Thở ra</span></div><p class="stp"><b>Chuẩn bị.</b> Chọn nơi yên tĩnh, tắt thông báo, ngồi thoải mái. Nếu có bộ bài, đặt một lá trước mặt. Thở theo vòng tròn khoảng ba nhịp rồi bấm sang bước tiếp.</p><p class="mu">Lá gợi ý: '+chips(m.c)+'</p></div>';
+
   if(i==n-1)return '<div class="panel" style="text-align:center"><h3 class="h" style="font-size:1.3rem">Hoàn tất</h3><p class="stp">Ngồi thêm một chút. Viết một từ mô tả điều bạn đang cảm thấy, không cần lý do.</p><div class="row" style="justify-content:center"><button class="btn" data-k="draw">Rút một lá để ngẫm</button><button class="btn ghost" data-k="stop">Về bài thiền</button></div></div>';
+
   return '<div class="panel" style="text-align:center"><div class="lbl" style="margin-top:0">Bước '+i+' / '+m.s.length+'</div><div class="br"><span class="i">Hít vào</span><span class="o">Thở ra</span></div><p class="stp">'+m.s[i-1]+'</p></div>'}})};
 
+
+
 /* ---------- Tự soi ---------- */
+
 var SESS=[['Chuẩn bị (3 phút)','Nơi yên tĩnh, tắt thông báo, thở 5 nhịp. Chấm mức căng thẳng hiện tại từ 0–10.'],['Đặt ý định','Dùng câu hỏi mở như “Mình cần nhìn thấy gì về…?”. Tránh câu hỏi có/không hoặc về việc người khác nghĩ gì.'],['Rút','Xáo bài trong im lặng, dùng tay trái, rút một lá (hoặc dùng trải bài Viên Kim Cương để làm rõ).','draw'],['Quan sát phản ứng trước khi đọc','Cơ thể nào co thắt hay giãn ra? Cảm xúc đầu tiên là gì? Tâm trí nói gì? Viết ba dòng.'],['Đọc bài giảng','Phần nào chạm vào mình, phần nào mình muốn bỏ qua? Điều muốn bỏ qua thường là điều đáng nhìn nhất.'],['Hành động nhỏ và khép lại','Chọn một việc làm trong 10 phút ở 24 giờ tới, chấm lại mức căng thẳng 0–10, cảm ơn, cất bài.']];
+
 var PRI=['Lá bài là gương, không phải lời tiên đoán. Sách nhấn mạnh bộ bài soi chiếu khoảnh khắc hiện tại và những gì bạn chưa muốn nhìn.','Lá “nặng” (Sét Đánh, Đau Buồn, Tội Lỗi…) mô tả một tiến trình đang diễn ra, không phải lời nguyền hay điềm xấu.','Không rút đi rút lại cho đến khi ra lá mình thích. Hãy ở lại với lá đầu tiên.','Lá Đại Bí Mật xuất hiện nhiều: có chuyển đổi lớn. Không có lá nào: vấn đề chỉ là tình tiết thoáng qua, “rồi sẽ qua”.','Không dùng bộ bài để phán xét hay chẩn đoán người khác. Lá Phóng Chiếu nhắc rằng ta hay nhìn người qua bộ phim của chính mình.','Không dùng bộ bài để quyết định các việc y tế, pháp lý hay tài chính lớn.','Kết thúc mỗi phiên bằng một việc nhỏ, cụ thể, có thể làm được; nếu thấy đau khổ tăng lên, dừng lại và tìm sự hỗ trợ.'];
+
 var self={tab:0,t:0};
+
 INIT.self=function(){
+
  try{var o=JSON.parse(store('oz-self')||'null');if(o&&o.tab>=0&&o.tab<3)self.tab=o.tab;if(o&&o.t>=0&&o.t<TOP.length)self.t=o.t}catch(e){}
+
  var h='';['Chủ đề','Phiên 20 phút','Nguyên tắc'].forEach(function(n,i){h+='<button aria-pressed="'+(i==self.tab)+'" data-i="'+i+'">'+n+'</button>'});$('selfseg').innerHTML=h;
+
  $('selfseg').onclick=function(e){var b=e.target.closest('button');if(b){self.tab=+b.dataset.i;selfRender()}};
+
  $('selfbody').addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(!b)return;
+
   if(b.dataset.k=='theme'){self.t=+b.dataset.i;selfRender()}
+
   else if(b.dataset.k=='draw'){showCard(rnd(79))}
+
   else if(b.dataset.k=='ask'){askTopic(self.t)}});
+
  selfRender()};
+
 function selfRender(){store('oz-self',JSON.stringify({tab:self.tab,t:self.t}));[].forEach.call($('selfseg').children,function(b,k){b.setAttribute('aria-pressed',k==self.tab)});var B=$('selfbody');PG.self=null;
+
  if(self.tab==0){var h='<p class="sub">Chọn một chủ đề gần với bạn lúc này.</p><div class="seg">';TOP.forEach(function(t,i){h+='<button data-k="theme" data-i="'+i+'" aria-pressed="'+(i==self.t)+'">'+esc(t.n)+'</button>'});
+
   var t=TOP[self.t];h+='</div><div class="panel"><h2 class="h" style="font-size:1.3rem">'+esc(t.n)+'</h2><p>'+t.ref+'</p><div class="lbl">Lá gợi ý</div><p>'+chips(t.c)+'</p><div class="lbl">Bài tập</div><p>'+t.b+'</p><div class="q"><b>Tự vấn</b>'+t.q+'</div>'+(t.care?'<div class="note">'+t.care+'</div>':'')+'<div class="row"><button class="btn" data-k="draw">Rút một lá cho chủ đề này</button><button class="btn ghost" data-k="ask">Hỏi tiếp trong Hỏi đáp</button></div></div>';B.innerHTML=h;
+
   var sg=B.querySelector('.seg'),on=sg.querySelector('[aria-pressed=true]');if(on&&sg.scrollTo)sg.scrollTo({left:on.offsetLeft-20,behavior:'auto'})}
+
  else if(self.tab==1){B.innerHTML='<p class="sub">Sáu bước, mỗi lần một bước.</p><div id="sspg"></div>';
+
   PG.self=Pager($('sspg'),{n:function(){return SESS.length},render:function(i){var s=SESS[i];return '<div class="panel"><div class="lbl" style="margin-top:0">Bước '+(i+1)+' / '+SESS.length+'</div><h2 class="h" style="font-size:1.3rem">'+s[0]+'</h2><p class="stp" style="text-align:left;margin:8px 0">'+s[1]+'</p>'+(s[2]?'<div class="row"><button class="btn" data-k="draw">Rút một lá</button></div>':'')+'</div>'}})}
+
  else{B.innerHTML='<div class="warn"><b>Lưu ý quan trọng:</b> bộ bài là công cụ tự phản chiếu và chú tâm, không phải phương pháp chẩn đoán hay điều trị. Nó không thay thế bác sĩ, nhà tâm lý hay thuốc. Không tự ý bỏ hoặc đổi thuốc theo lá bài. Nếu bạn buồn, lo âu kéo dài, mất ngủ nhiều ngày, từng chấn thương nặng hoặc có ý nghĩ làm hại bản thân, hãy gặp chuyên gia sức khỏe tâm thần hoặc bác sĩ, và nói với người thân. Trong tình huống nguy cấp, gọi cấp cứu (115 tại Việt Nam) hoặc đến cơ sở y tế gần nhất.</div><div id="prpg"></div>';
+
   PG.self=Pager($('prpg'),{n:function(){return PRI.length},render:function(i){return '<div class="panel"><div class="lbl" style="margin-top:0">Nguyên tắc '+(i+1)+' / '+PRI.length+'</div><p class="stp" style="text-align:left">'+PRI[i]+'</p></div>'}})}}
 
+
+
 /* ---------- Tra cứu ---------- */
+
 var REF0=[['Tinh thần của bộ bài','Đây không phải bộ bài để <b>tiên đoán</b>. Osho Zen Tarot là tấm gương phản chiếu khoảnh khắc hiện tại, không phán xét, không so sánh. Mỗi lá bài là lời mời tỉnh thức: nhạy cảm, trực giác, từ bi, cởi mở, dũng cảm và là chính mình. Bộ bài thêm lá <b>Bậc Thầy</b> (không số) để thoát khỏi vòng xoắn luân hồi, vượt lên chính hành trình.'],
+
 ['1 · Đại Bí Mật (23 lá)','Các chủ đề lớn của hành trình tâm linh, từ Kẻ Khờ (0) đến Viên Mãn (XXI) và Bậc Thầy. Xuất hiện nhiều nghĩa là cảnh đời đang đổi lớn; vắng mặt nghĩa là “rồi sẽ qua”.'],
+
 ['2 · Tiểu Bí Mật (56 lá)','Bốn bộ, mỗi bộ 14 lá: 4 lá cung đình (nay là các cấp độ làm chủ), các lá 2–10 và lá Ách.'],
+
 ['3 · Bốn nguyên tố','<span style="color:var(--fire)"><b>Lửa</b></span>: hành động, trực giác. <span style="color:var(--water)"><b>Nước</b></span>: cảm xúc. <span style="color:var(--cloud)"><b>Mây</b></span>: tâm trí, đến rồi đi. <span style="color:var(--rain)"><b>Cầu Vồng</b></span>: đời sống vật chất, cầu nối đất–trời.'],
+
 ['4 · Cách rút bài','Xáo bài trong im lặng, xòe úp, dùng tay trái (tay tiếp nhận) chọn lá. Lật bài, ở lại với phản ứng bên trong, đừng vội phân tích.']];
+
 var ref={tab:0};
+
 INIT.ref=function(){var rv=+store('oz-ref');if(rv>=0&&rv<3)ref.tab=rv;var h='';['Tinh thần','Hành trình','Biểu tượng'].forEach(function(n,i){h+='<button aria-pressed="'+(i==ref.tab)+'" data-i="'+i+'">'+n+'</button>'});$('refseg').innerHTML=h;
+
  $('refseg').onclick=function(e){var b=e.target.closest('button');if(b){ref.tab=+b.dataset.i;refRender()}};refRender()};
+
 function refRender(){store('oz-ref',ref.tab);[].forEach.call($('refseg').children,function(b,k){b.setAttribute('aria-pressed',k==ref.tab)});var B=$('refbody');PG.ref=null;
+
  if(ref.tab==0){B.innerHTML='<div id="rfpg"></div>';PG.ref=Pager($('rfpg'),{n:function(){return REF0.length},render:function(i){return '<div class="panel"><h2 class="h" style="font-size:1.3rem">'+REF0[i][0]+'</h2><p class="stp" style="text-align:left;margin:8px 0">'+REF0[i][1]+'</p></div>'}})}
+
  else if(ref.tab==1){B.innerHTML=mapR();B.addEventListener('toggle',function(e){if(e.target.open)[].forEach.call(B.querySelectorAll('details'),function(d){if(d!==e.target)d.open=false})},true)}
+
  else{B.innerHTML='<input id="sq" placeholder="Tìm biểu tượng: sen, rắn, trăng, đỏ…" aria-label="Tìm biểu tượng"><div class="sym" id="sym"></div>';
+
   function symR(q){q=P(q||'');$('sym').innerHTML=SY.filter(function(s){return !q.s||P(s[0]+' '+s[1]).s.indexOf(q.s)>=0}).map(function(s){return '<div><b>'+s[0]+'</b><br>'+s[1]+'</div>'}).join('')||'<div>Không tìm thấy.</div>'}
+
   $('sq').oninput=function(){symR(this.value)};symR()}}
 
+
+
 /* ================= HỎI ĐÁP ================= */
+
 var ctx={topics:[],step:0,tent:false,last:null},qrEl=null;
+
 var CRISIS=['muốn chết','không muốn sống','hết muốn sống','không còn muốn sống','kết thúc cuộc sống','kết liễu','tự làm đau','tự hại','cắt tay','tự tử','tự sát','tự vẫn','muốn tự tử','nghĩ đến tự tử','ý định tự tử','chết đi cho rồi','chết cho xong','muốn biến mất khỏi','sống không còn ý nghĩa'].map(P);
+
 var CK=ALL.map(function(c,j){return{j:j,n:[P(c.vi),P(c.en)],len:c.vi.split(' ').length}});
+
 var SYN=SY.map(function(s){return{s:s,n:s[0].split(/\s*\/\s*/).map(P)}});
+
 var FAQ=[
+
 {k:['bộ bài là gì','osho zen tarot là gì','zen tarot là gì','giới thiệu bộ bài','tarot là gì','bộ bài này là gì','bộ bài có bao nhiêu lá','bao nhiêu lá','79 lá','cấu trúc bộ bài','đại bí mật là gì','tiểu bí mật là gì'],a:'<p><b>Osho Zen Tarot</b> không phải bộ bài để tiên đoán. Nó là tấm gương phản chiếu khoảnh khắc hiện tại, không phán xét, không so sánh.</p><p>Bộ bài có <b>79 lá</b>: 23 lá <b>Đại Bí Mật</b> (từ Kẻ Khờ đến Viên Mãn, thêm lá Bậc Thầy không số) và 56 lá <b>Tiểu Bí Mật</b> chia thành bốn bộ Lửa, Nước, Mây, Cầu Vồng, mỗi bộ 14 lá.</p>',qr:[{t:'Bốn nguyên tố',x:'Bốn nguyên tố là gì?'},{t:'Mở Thư viện',d:{a:'go',v:'lib'}}]},
+
 {k:['bốn nguyên tố','4 nguyên tố','nguyên tố là gì','lửa nước mây cầu vồng','bốn bộ','mấy bộ'],a:'<p>Bốn bộ tương ứng bốn nguyên tố:</p><p><b style="color:var(--fire)">Lửa</b>: hành động, trực giác. <b style="color:var(--water)">Nước</b>: cảm xúc, trái tim. <b style="color:var(--cloud)">Mây</b>: tâm trí, đến rồi đi nên đừng quá nghiêm trọng. <b style="color:var(--rain)">Cầu Vồng</b>: đời sống vật chất, cầu nối đất – trời.</p>',qr:[{t:'Xem bản đồ hành trình',d:{a:'go',v:'ref'}}]},
+
 {k:['tiên đoán','bói','bói bài','đoán tương lai','có chính xác không','có đúng không','linh nghiệm','có thật không','có linh không','dự đoán'],a:'<p>Không. Bộ bài này không dùng để tiên đoán mà để soi chiếu <b>khoảnh khắc hiện tại</b> và những điều bạn chưa muốn nhìn. Vì vậy mình sẽ không nói “sẽ xảy ra gì”, mà giúp bạn thấy mình đang ở đâu.</p><p class="note">Các quyết định lớn về y tế, pháp lý, tài chính nên hỏi chuyên gia, không dựa vào lá bài.</p>',qr:[{t:'Rút một lá để soi',d:{a:'act',k:'draw'}}]},
+
 {k:['cách rút bài','rút bài thế nào','rút bài như thế nào','làm sao rút bài','xáo bài','tay trái','cách chọn lá','rút bài ra sao'],a:'<p>Xáo bài trong im lặng, xòe úp, dùng <b>tay trái</b> (tay tiếp nhận) chọn lá. Lật bài, ở lại với phản ứng bên trong, đừng vội phân tích.</p><p>Trên trang này, bạn có thể bấm “Rút một lá” để rút ngẫu nhiên, hoặc vào mục Trải bài.</p>',qr:[{t:'Rút một lá',d:{a:'act',k:'draw'}},{t:'Mở Trải bài',d:{a:'go',v:'spread'}}]},
+
 {k:['trải bài nào','nên trải','kiểu trải','cách trải bài','trải bài gì','chọn trải bài','loại trải bài','có những trải bài nào','các trải bài'],a:'__SPREADS__',qr:[{t:'Mở Trải bài',d:{a:'go',v:'spread'}}]},
+
 {k:['rút lại','rút nhiều lần','rút lại lá','mỗi ngày rút mấy lá','rút bao nhiêu lần','rút đi rút lại'],a:'<p>Đừng rút đi rút lại cho đến khi ra lá mình thích. Hãy ở lại với <b>lá đầu tiên</b>: phản ứng của bạn với nó chính là một phần của bài học.</p>'},
+
 {k:['lá xấu','lá nặng','điềm xấu','lá đáng sợ','lá tệ','lời nguyền','sét đánh có xấu không','lá bài xấu'],a:'<p>Những lá “nặng” như Sét Đánh, Đau Buồn, Tội Lỗi mô tả một <b>tiến trình đang diễn ra</b>, không phải lời nguyền hay điềm xấu. Thường chúng báo rằng điều giả tạo đang sụp để điều thật có chỗ.</p>',qr:[{t:'Xem lá Sét Đánh',x:'Lá Sét Đánh nghĩa là gì?'}]},
+
 {k:['zorba','zorba phật','zorba the buddha'],a:'<p>Osho mô tả con người mới là <b>“Zorba the Buddha”</b>: tận hưởng thú vui trần thế như Zorba người Hy Lạp, đồng thời có sự tĩnh lặng của Phật. Vì vậy, trong bộ bài, cười đùa, thân xác, công việc, tình yêu và thiền đều là con đường.</p>'},
+
 {k:['dùng bộ bài để thiền','thiền với lá bài','thiền với bài','thiền bằng bài','các bài thiền'],a:'<p>Có 8 bài thiền với lá bài: ngắm lá bài, chứng nhân, nhập thân, khoảng lặng giữa hơi thở, một lá cho cả ngày, thiền vận động giải tỏa, thiền buổi tối và thiền thiên nhiên. Bạn có thể được dẫn từng bước trong mục Thiền.</p>',qr:[{t:'Mở mục Thiền',d:{a:'go',v:'med'}}]},
+
 {k:['thay thế bác sĩ','chữa bệnh','thay thuốc','trị liệu','trầm cảm','chẩn đoán','bỏ thuốc','có chữa được','điều trị'],a:'<p>Bộ bài là công cụ <b>tự phản chiếu</b>, không phải phương pháp chẩn đoán hay điều trị, và không thay thế bác sĩ, nhà tâm lý hay thuốc. Không tự ý bỏ hoặc đổi thuốc theo lá bài.</p><p>Nếu bạn buồn hoặc lo âu kéo dài, mất ngủ nhiều ngày, hay từng chấn thương nặng, hãy gặp chuyên gia. Khẩn cấp: gọi 115 hoặc đến cơ sở y tế gần nhất.</p>'},
+
 {k:['ai làm','tác giả','minh họa','deva padma','nguồn','sách gốc','osho là ai'],a:'<p>Nội dung dựa trên <i>Osho Zen Tarot: The Transcendental Game of Zen</i> (Osho International Foundation), minh họa của Deva Padma. Bài giảng ở đây được soạn lại bằng lời của riêng mình, phục vụ học tập.</p>'},
+
 {k:['bạn là ai','mình đang nói chuyện với ai','bạn là bot','hoạt động thế nào','dữ liệu của tôi','có lưu không','bảo mật','riêng tư','quyền riêng tư','trí tuệ nhân tạo'],a:'<p>Mình là phần hỏi đáp của trang. Mình chạy ngay trên trình duyệt của bạn, tìm trong 79 bài giảng, bài tập, bài thiền và các chủ đề tự soi để gợi ý; điều bạn gõ không bị gửi đi đâu. Mình không phải bác sĩ hay nhà trị liệu, và có lúc sẽ hỏi lại để hiểu rõ hơn.</p>'}];
+
 FAQ.forEach(function(f){f.kk=f.k.map(P)});
+
 function crisis(){return{html:'<p>Mình rất tiếc bạn đang đau đến mức này, và cảm ơn bạn đã nói ra. Bạn xứng đáng được hỗ trợ ngay bây giờ, bởi một con người thật.</p><p>Hãy nhắn hoặc gọi cho một người thân tin cậy và nhờ họ ở bên bạn. Nếu bạn có nguy cơ làm hại bản thân, hãy gọi cấp cứu <b>115</b> hoặc đến cơ sở y tế gần nhất ngay.</p><p class="mu">Trang này chỉ là công cụ tự phản chiếu, không thể thay thế sự giúp đỡ của người thật và chuyên gia. Mình sẽ không rút bài hay đưa bài tập lúc này.</p>',qr:null}}
+
 function qrFor(skip){var a=[['practice','Bài tập nhỏ'],['selfq','Câu tự vấn'],['med','Bài thiền gợi ý'],['spread','Trải bài phù hợp'],['draw','Rút một lá']],q=[];a.forEach(function(x){if(x[0]!=skip)q.push({t:x[1],d:{a:'act',k:x[0]}})});if(ctx.topics[1])q.push({t:'Nói về: '+ctx.topics[1].n,d:{a:'act',k:'swap'}});return q}
+
 function topicAnswer(list,tent){ctx.topics=list;ctx.tent=tent;ctx.step=0;var t=list[0],h='';
+
  h+=tent?'<p>Mình đoán bạn đang nói về <b>'+esc(t.n)+'</b>, đúng không?</p>':'<p>Mình hiểu. Chủ đề đang nổi lên là <b>'+esc(t.n)+'</b>.</p>';
+
  h+='<p>'+t.ref+'</p>';
+
  if(list[1])h+='<p class="mu">Câu bạn viết còn chạm tới <b>'+esc(list[1].n)+'</b>; bạn có thể chuyển sang chủ đề ấy bất cứ lúc nào.</p>';
+
  h+='<div class="lbl">Lá gợi ý theo chủ đề</div><p>'+chips(t.c)+'</p>';
+
  if(t.care)h+='<div class="note">'+t.care+'</div>';
+
  return{html:h,qr:tent?[{t:'Đúng vậy',d:{a:'act',k:'practice'}},{t:'Không hẳn, mình nói lại',d:{a:'act',k:'reclar'}}]:qrFor()}}
+
 function ask1(){return{html:'<p>Bạn kể mình nghe điều đang làm bạn bận lòng trước nhé, một hai câu là đủ. Mình sẽ gợi ý lá bài, bài tập và câu tự vấn phù hợp.</p>',qr:EX()}}
+
 function EX(){return[{t:'Mình đang rất căng thẳng vì công việc',x:'Mình đang rất căng thẳng vì công việc'},{t:'Mình và người yêu hay cãi nhau',x:'Mình và người yêu hay cãi nhau'},{t:'Mình phân vân không biết chọn gì',x:'Mình phân vân không biết chọn gì'},{t:'Lá Thay Đổi nghĩa là gì?',x:'Lá Thay Đổi nghĩa là gì?'}]}
+
 function medNums(t){var o=[],m,re=/thiền số (\d)/g;while((m=re.exec(t))!==null)o.push(+m[1]-1);return o}
+
 var ACT={
+
  practice:function(){var t=ctx.topics[0];if(!t)return ask1();ctx.tent=false;var h='<div class="lbl">Bài tập · '+esc(t.n)+'</div><p>'+t.b+'</p>';var ns=medNums(t.b);ns.forEach(function(i){if(MD[i])h+="<button class='lk' data-a='med' data-m='"+i+"' data-g='1'>Bắt đầu: "+esc(MD[i].n)+"</button> "});h+='<p class="mu" style="font-size:.9rem">Chỉ cần làm một phần nhỏ. Làm được ba phút còn hơn kế hoạch một giờ.</p>';return{html:h,qr:qrFor('practice')}},
+
  selfq:function(){var t=ctx.topics[0];if(!t)return ask1();return{html:'<div class="lbl">Tự vấn</div><div class="q">'+t.q+'</div><p class="mu">Viết ra ba dòng, không chỉnh sửa. Điều bạn muốn bỏ qua thường là điều đáng nhìn nhất.</p>',qr:qrFor('selfq')}},
+
  med:function(){var t=ctx.topics[0];if(!t)return ask1();var h='<div class="lbl">Bài thiền gợi ý</div>';t.med.slice(0,2).forEach(function(i){var m=MD[i];h+='<p><b>'+m.n+'</b> <span class="mu">· '+m.t+'</span><br>'+first(m.s[0])+"<br><button class='lk' data-a='med' data-m='"+i+"' data-g='1'>Bắt đầu hướng dẫn</button></p>"});return{html:h,qr:qrFor('med')}},
+
  spread:function(){var t=ctx.topics[0];if(!t)return ask1();var s=SP[t.sp];return{html:'<div class="lbl">Trải bài phù hợp</div><p><b>'+s.n+'</b> <span class="mu">· '+s.p.length+' lá</span></p><p>'+SPU[t.sp]+"</p><button class='lk' data-a='sp' data-s='"+t.sp+"'>Mở trải bài này</button>",qr:qrFor('spread')}},
+
  draw:function(){var j=rnd(79),c=ALL[j];ctx.last=j;return{html:'<div class="lbl">Lá bạn rút · '+eln(c)+' · '+c.lab+'</div><p><b style="font-size:1.15rem">'+c.vi+'</b> <i class="mu">'+c.en+'</i></p><p>'+first(c.t)+'</p><p class="mu" style="font-size:.9rem">Hãy để mắt dừng lại vài giây trước khi đọc tiếp. Phản ứng đầu tiên của bạn là một phần của lá bài.</p>'+"<button class='lk' data-a='card' data-j='"+j+"'>Đọc đầy đủ</button>",qr:[{t:'Câu tự vấn của lá này',d:{a:'act',k:'cardq'}}].concat(ctx.topics.length?[{t:'Bài tập nhỏ',d:{a:'act',k:'practice'}}]:[])}},
+
  cardq:function(){var c=ALL[ctx.last==null?rnd(79):ctx.last];return{html:'<div class="lbl">Tự vấn · '+c.vi+'</div><div class="q">'+c.q+'</div>',qr:[{t:'Rút lá khác',d:{a:'act',k:'draw'}}]}},
+
  why:function(){var t=ctx.topics[0];if(!t)return ask1();var h='<div class="lbl">Vì sao những lá này?</div>';t.c.forEach(function(n){var j=NI[n];if(j!=null)h+='<p>'+cl(n)+' '+first(ALL[j].t)+'</p>'});h+='<p class="mu" style="font-size:.9rem">Đây là các lá cộng hưởng với chủ đề, do trang chọn. Lá bạn tự rút ngẫu nhiên là chuyện khác.</p>';return{html:h,qr:qrFor('why')}},
+
  swap:function(){if(ctx.topics.length>1)ctx.topics.reverse();return topicAnswer(ctx.topics.slice(),false)},
+
  reclar:function(){ctx.topics=[];return{html:'<p>Cảm ơn bạn đã chỉnh lại. Bạn thử kể thêm một chút: chuyện gì đang xảy ra, cảm xúc nổi bật nhất là gì (lo, buồn, giận, mệt…), và liên quan tới ai hay việc gì?</p>',qr:EX()}},
+
  next:function(){var seq=['practice','selfq','med','spread'],k=seq[ctx.step%seq.length];ctx.step++;return ACT[k]()}};
+
 function doAct(k,b){go('ask');clearQR();addMsg('u',esc(b.textContent.trim()));var t=typing();setTimeout(function(){t.parentNode&&t.parentNode.removeChild(t);var r=ACT[k]?ACT[k]():ask1();addMsg('a',r.html);qr(r.qr)},420)}
+
 function spreadsHTML(){var h='<p>Mỗi kiểu trải hợp với một tình huống:</p><ul style="padding-left:18px;margin:6px 0">';SP.forEach(function(s,i){h+='<li><b>'+s.n+'</b> ('+s.p.length+' lá): '+SPU[i]+'</li>'});return h+'</ul>'}
+
 function cardAnswer(js){js.sort(function(a,b){return b.len-a.len});var j=js[0].j,c=ALL[j];ctx.last=j;
+
  var h='<div class="lbl">'+eln(c)+' · '+c.lab+'</div><p><b style="font-size:1.15rem">'+c.vi+'</b> <i class="mu">'+c.en+'</i></p><p>'+c.t+'</p><div class="q"><b>Tự vấn</b>'+c.q+'</div>'+relHTML(c.vi);
+
  if(js[1])h+='<p class="mu">Câu hỏi còn nhắc tới lá: '+chips([ALL[js[1].j].vi])+'</p>';
+
  return{html:h,qr:[{t:'Mở trong Thư viện',d:{a:'lib',j:j}},{t:'Rút một lá',d:{a:'act',k:'draw'}}]}}
+
 function fu(s){
+
  if(/(bai tap|nen lam|lam gi|lam sao|giai phap|thuc hanh|cach nao|phai lam)/.test(s))return'practice';
+
  if(/(tu van|cau hoi|tu hoi|soi chieu|nen nghi)/.test(s))return'selfq';
+
  if(/(thien|ngoi yen)/.test(s))return'med';
+
  if(/(trai bai|kieu trai)/.test(s))return'spread';
+
  if(/(la nao|goi y la|la bai nao|vi sao|tai sao|giai thich)/.test(s))return'why';
+
  if(/(tiep|noi them|them nua|con gi nua|chi tiet)/.test(s))return'next';
+
  return null}
+
 function route(raw){
+
  var Q=P(raw),w=Q.s?Q.s.split(' ').length:0,s=Q.s;
+
  for(var i=0;i<CRISIS.length;i++){var k=CRISIS[i];if(Q.dia?has(Q.d,k.d):(k.s!='tu tu'&&k.s!='tu van'&&k.s!='tu hai'&&has(Q.s,k.s)))return crisis()}
+
  if(w<=4&&/^(xin chao|chao|hello|hi|hey|alo)( |$)/.test(s))return{html:'<p>Xin chào. Bạn muốn kể điều gì đang làm bạn bận lòng, hay hỏi về một lá bài?</p>',qr:EX()};
+
  if(w<=6&&/(cam on|thanks|thank you|tks)/.test(s))return{html:'<p>Rất vui được đồng hành cùng bạn. Hít một hơi thật dài nhé. Khi nào cần, mình ở đây.</p>',qr:ctx.topics.length?qrFor():EX()};
+
  if(ctx.tent&&/^(dung|vang|u|da|dung roi|dung vay|phai|co|uh|ok)$/.test(s))return ACT.practice();
+
  if(/(rut (mot )?(la|bai)|boc (mot )?la|rut cho (minh|toi))/.test(s)&&!/(cach|nhu the nao|the nao|sao)/.test(s))return ACT.draw();
+
  var cj=[];CK.forEach(function(c){if(c.n.some(function(n){return M(Q,n)}))cj.push(c)});
+
  if(cj.length){var raw2=raw.toLowerCase(),cue=/(ý nghĩa|nghĩa là|là gì|giải thích|nói về|kể về|cho mình biết|cho tôi biết)/.test(raw2)||/(^|\s)(lá|bài)\s/.test(raw2)||/(y nghia|nghia la|la gi|giai thich|noi ve|ke ve|la bai)/.test(s)||cj[0].n.some(function(n){return s===n.s||s==='la '+n.s||s==='bai '+n.s});if(cue)return cardAnswer(cj)}
+
  var fb=null,fs=0;FAQ.forEach(function(f){var sc=0;f.kk.forEach(function(k){if(M(Q,k))sc++});if(sc>fs){fs=sc;fb=f}});
+
  if(fb){return{html:fb.a=='__SPREADS__'?spreadsHTML():fb.a,qr:(fb.qr||[]).map(function(x){return x.x?{t:x.t,d:{a:'send',x:x.x}}:x})}}
+
  var hits=[];TOP.forEach(function(t){var sc=0;t.kk.forEach(function(k){if(M(Q,k.k))sc+=k.w});if(sc)hits.push({t:t,s:sc})});hits.sort(function(a,b){return b.s-a.s});
+
  var act=fu(s);
+
  if(/(bieu tuong|y nghia|tuong trung|la gi|nghia la)/.test(s)&&(!hits.length||hits[0].s<2)){for(var n=0;n<SYN.length;n++){if(SYN[n].n.some(function(k){return M(Q,k)}))return{html:'<div class="lbl">Biểu tượng</div><p><b>'+SYN[n].s[0]+'</b></p><p>'+SYN[n].s[1]+'</p>',qr:[{t:'Tra từ điển biểu tượng',d:{a:'go',v:'ref'}}]}}}
+
  if(ctx.topics.length&&act&&(!hits.length||hits[0].s<2||w<=4))return ACT[act]();
+
  if(hits.length){var top=hits[0].s,ch=hits.filter(function(h){return h.s>=Math.max(1,top*.6)}).slice(0,2).map(function(h){return h.t});return topicAnswer(ch,top<2&&hits.length>1&&hits[1].s>=top)}
+
  if(ctx.topics.length&&act)return ACT[act]();
+
  return{html:'<p>Mình chưa nắm rõ bạn đang gặp điều gì. Bạn thử kể thêm bằng vài từ về <b>cảm xúc</b> (lo, buồn, giận, mệt…), <b>chuyện đang xảy ra</b> (công việc, người yêu, gia đình, tiền bạc…) hoặc <b>điều bạn cần</b> (quyết định, nghỉ ngơi, bình yên)?</p><p class="mu">Hoặc hỏi thẳng về một lá, ví dụ “Lá Buông Bỏ nghĩa là gì?”.</p>',qr:EX()}}
+
 var chatLog=[];
+
 function saveChat(){try{store('oz-chat',JSON.stringify(chatLog.slice(-40)));store('oz-ctx',JSON.stringify({topics:ctx.topics,step:ctx.step,tent:ctx.tent,last:ctx.last}))}catch(e){}}
+
 function addMsg(who,html,tmp){var m=document.createElement('div');m.className='m '+who;m.innerHTML=html;$('msgs').appendChild(m);var box=$('msgs');if(box.scrollTo)box.scrollTo({top:box.scrollHeight,behavior:'smooth'});else box.scrollTop=box.scrollHeight;if(!tmp){chatLog.push({w:who,h:html});saveChat()}return m}
+
 function typing(){var m=addMsg('a','<span class="dots"><i></i><i></i><i></i></span>',1);m.setAttribute('aria-label','Đang soạn câu trả lời');return m}
+
 function qr(list){clearQR();if(!list||!list.length)return;var d=document.createElement('div');d.className='qr';d.innerHTML=list.map(function(x){var o=x.d||{a:'send',x:x.x||x.t};return '<button'+Object.keys(o).map(function(k){return ' data-'+k+'="'+esc(o[k])+'"'}).join('')+'>'+esc(x.t)+'</button>'}).join('');$('msgs').appendChild(d);qrEl=d;var box=$('msgs');if(box.scrollTo)box.scrollTo({top:box.scrollHeight,behavior:'smooth'});else box.scrollTop=box.scrollHeight}
+
 function clearQR(){if(qrEl&&qrEl.parentNode)qrEl.parentNode.removeChild(qrEl);qrEl=null}
+
 function send(raw){raw=(raw||'').trim().slice(0,500);if(!raw)return;clearQR();addMsg('u',esc(raw));var t=typing();setTimeout(function(){var r;try{r=route(raw)}catch(e){r=ask1()}if(t.parentNode)t.parentNode.removeChild(t);addMsg('a',r.html);qr(r.qr)},380+Math.min(raw.length*7,520))}
+
 function askAbout(text){go('ask');send(text)}
+
 function askTopic(i){go('ask');clearQR();addMsg('u','Mình muốn nói về: '+esc(TOP[i].n));var t=typing();setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t);var r=topicAnswer([TOP[i]],false);addMsg('a',r.html);qr(r.qr)},420)}
+
 var GREET='<p><b>Xin chào.</b> Đây là góc hỏi đáp của Osho Zen Tarot. Bạn có thể kể điều đang làm mình bận lòng (một câu là đủ), hỏi ý nghĩa một lá bài, cách trải bài hay cách thiền. Mình sẽ gợi ý lá bài, bài tập và câu tự vấn.</p><p class="mu" style="font-size:.9rem">Bộ bài là tấm gương để tự soi, không phải bói toán hay chẩn đoán.</p>';
+
 function newChat(){chatLog=[];ctx.topics=[];ctx.step=0;ctx.tent=false;ctx.last=null;store('oz-chat','');store('oz-ctx','');$('msgs').innerHTML='';qrEl=null;addMsg('a',GREET);qr(EX())}
+
 INIT.ask=function(){
+
  var sv=null;try{sv=JSON.parse(store('oz-chat')||'null')}catch(e){}
+
  if(sv&&sv.length){try{var c0=JSON.parse(store('oz-ctx')||'null');if(c0){ctx.topics=c0.topics||[];ctx.step=c0.step||0;ctx.tent=!!c0.tent;ctx.last=c0.last==null?null:c0.last}}catch(e){}
+
   sv.forEach(function(x){var m=document.createElement('div');m.className='m '+(x.w=='u'?'u':'a');m.innerHTML=x.h;$('msgs').appendChild(m);chatLog.push(x)});
+
   var bx=$('msgs');bx.scrollTop=bx.scrollHeight;
+
   qr([{t:'Cuộc trò chuyện mới',d:{a:'newchat'}}].concat(EX().slice(0,3)));
+
  }else{addMsg('a',GREET);qr(EX())}
+
  var inp=$('inp');function ph(){inp.placeholder=innerWidth>480?'Kể điều đang làm bạn bận lòng, hoặc hỏi về một lá bài…':'Kể điều bạn bận lòng…'}ph();window.addEventListener('resize',ph);function grow(){inp.style.height='auto';inp.style.height=Math.min(inp.scrollHeight,120)+'px'}
+
  function go1(){var v=inp.value;inp.value='';grow();send(v)}
+
  $('snd').onclick=go1;inp.oninput=grow;
+
  inp.onkeydown=function(e){if(e.key=='Enter'&&!e.shiftKey&&!e.isComposing&&e.keyCode!==229){e.preventDefault();go1()}};
+
 };
+
 /* ---------- Ủy quyền click toàn cục ---------- */
+
 document.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(!b)return;var a=b.dataset.a,j=+b.dataset.j;
+
  if(a=='card')showCard(j);
+
  else if(a=='lib'){closeSheet();libOpen(j)}
+
  else if(a=='askcard'){closeSheet();askAbout('Lá '+ALL[j].vi+' nghĩa là gì?')}
+
  else if(a=='topic'){closeSheet();askTopic(+b.dataset.t)}
+
  else if(a=='go'){closeSheet();go(b.dataset.v)}
+
  else if(a=='med'){closeSheet();medOpen(+b.dataset.m,b.dataset.g=='1')}
+
  else if(a=='sp'){closeSheet();spOpen(+b.dataset.s)}
+
  else if(a=='act')doAct(b.dataset.k,b)
+
  else if(a=='newchat'){closeSheet();go('ask');newChat()}
+
  else if(a=='send'){go('ask');send(b.dataset.x)}});
+
 go((location.hash||'#'+(store('oz-view')||'ask')).slice(1));
+
 /* ---------- Cài ứng dụng (PWA) ---------- */
+
 var dip=null,WEB=/^https?:$/.test(location.protocol);
+
 var STANDALONE=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+
 function installHelp(){var ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(ua),h='<h2 class="h" style="margin-bottom:6px">Cài thành ứng dụng</h2>';
+
  if(!WEB)h+='<p>Bạn đang mở trang trực tiếp từ một tệp trên máy, nên điện thoại không cho cài thành ứng dụng và dữ liệu có thể không được giữ lại. Hãy đưa cả thư mục ứng dụng lên một địa chỉ https (Netlify Drop, GitHub Pages hoặc Cloudflare Pages đều miễn phí), rồi mở đường link đó trên điện thoại.</p>';
+
  else if(ios)h+='<p>1. Mở trang này bằng <b>Safari</b> (không dùng trình duyệt trong Zalo, Facebook).<br>2. Bấm nút <b>Chia sẻ</b> ở thanh dưới.<br>3. Kéo xuống, chọn <b>Thêm vào Màn hình chính</b>, rồi bấm <b>Thêm</b>.</p>';
+
  else if(and)h+='<p>1. Mở trang này bằng <b>Chrome</b> (không dùng trình duyệt trong Zalo, Facebook).<br>2. Bấm menu <b>ba chấm</b> ở góc trên.<br>3. Chọn <b>Cài đặt ứng dụng</b> hoặc <b>Thêm vào màn hình chính</b>.</p>';
+
  else h+='<p>Trên máy tính, tìm biểu tượng cài đặt ở cuối thanh địa chỉ của Chrome hoặc Edge. Trên điện thoại, dùng Safari (iPhone) hoặc Chrome (Android) rồi chọn “Thêm vào Màn hình chính”.</p>';
+
  h+='<p class="mu" style="margin-top:10px">Cuộc trò chuyện, lá đang xem, trải bài và giao diện được lưu ngay trên máy. Xóa dữ liệu trình duyệt thì sẽ mất. Trên iPhone, bản cài ra màn hình chính lưu riêng với bản mở bằng Safari.</p>';openSheet(h)}
+
 if(STANDALONE)$('btnInstall').hidden=true;
+
 window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();dip=e;$('btnInstall').hidden=false});
+
 $('btnInstall').onclick=function(){if(dip){dip.prompt();dip.userChoice.then(function(){dip=null})}else installHelp()};
+
 window.addEventListener('appinstalled',function(){$('btnInstall').hidden=true;dip=null});
+
 if('serviceWorker' in navigator&&WEB){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(err){console.warn('SW error:',err)})})}
+
 </script>
+
 </body>
+
 </html>
